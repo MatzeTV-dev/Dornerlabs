@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRE Security - Premium Sicherheitsdienstleister in Österreich</title>
+    <meta name="description" content="SRE Security - Professionelle Sicherheitsdienstleistungen in Österreich. Objektschutz, Event Security, VIP-Schutz und mehr. 24/7 verfügbar.">
+
+    <!-- Password Protection Check -->
+    <script>
+        // Überprüfe ob Benutzer eingeloggt ist
+        const isAuthenticated = sessionStorage.getItem('sre_authenticated') === 'true';
+        if (!isAuthenticated) {
+            // Umleiten zur Login-Seite
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="SRE Security Logo" class="logo-icon" width="40" height="40">
+            <span>SRE <span style="color: var(--brand-orange);">SECURITY</span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Über Uns</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#careers">Karriere</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/logo.svg" alt="SRE Security Logo" class="logo-icon" width="60" height="60">
+                <span>SRE <span style="color: var(--brand-orange);">SECURITY</span></span>
+            </div>
+            <h1 id="typingText">SICHERHEIT NEU GEDACHT</h1>
+            <p class="subheadline">Premium Sicherheitsdienstleister in Österreich</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Anfrage stellen</a>
+                <a href="#services" class="btn btn-outline">Services entdecken</a>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="number" data-target="500">0</div>
+                    <div class="label">Events</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number" data-target="5">0</div>
+                    <div class="label">Jahre</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number" data-target="40">0</div>
+                    <div class="label">Team</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>UNSERE LEISTUNGEN</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Objektschutz</h3>
+                <p>Ihr Gebäude in sicheren Händen</p>
+                <a href="#contact" class="learn-more">
+                    Mehr erfahren <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <h3>Event Security</h3>
+                <p>Damit Ihre Veranstaltung sicher gelingt</p>
+                <a href="#contact" class="learn-more">
+                    Mehr erfahren <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-user-shield"></i></div>
+                <h3>VIP-Services</h3>
+                <p>Doorman, Empfang und gehobener Objektschutz</p>
+                <a href="#contact" class="learn-more">
+                    Mehr erfahren <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Sicherheitsberatung</h3>
+                <p>Professionelle Risikoanalyse & Konzepte</p>
+                <a href="#contact" class="learn-more">
+                    Mehr erfahren <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+                <div class="service-card">
+                <div class="icon"><i class="fas fa-car"></i></div>
+                <h3>Verkehrsregelung</h3>
+                <p>Regelung des Verkehs bei Baustellen etc.</p>
+                <a href="#contact" class="learn-more">
+                    Mehr erfahren <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>WARUM SRE SECURITY?</h2>
+        </div>
+        <div class="about-content">
+            <div class="usps">
+                <div class="usp-item">
+                    <div class="icon"><i class="fas fa-award"></i></div>
+                    <h3>1 Jahre Erfahrung</h3>
+                </div>
+                <div class="usp-item">
+                    <div class="icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Zertifiziertes Team</h3>
+                </div>
+                <div class="usp-item">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <h3>24/7 Verfügbarkeit</h3>
+                </div>
+                <div class="usp-item">
+                    <div class="icon"><i class="fas fa-cog"></i></div>
+                    <h3>Maßgeschneiderte Lösungen</h3>
+                </div>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="number">500+</div>
+                    <div class="label">Gesicherte Events</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">5+</div>
+                    <div class="label">Jahre Erfahrung</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">40+</div>
+                    <div class="label">Team-Mitglieder</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">100%</div>
+                    <div class="label">Kundenzufriedenheit</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <h2>PORTFOLIO</h2>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="Alle">Alle</button>
+            <button class="filter-btn" data-filter="Events">Events</button>
+            <button class="filter-btn" data-filter="Objekte">Objekte</button>
+            <button class="filter-btn" data-filter="VIP">VIP</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="project-card" data-category="Events">
+                <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800" alt="Vienna Music Festival">
+                <div class="project-overlay">
+                    <h3>Gamlitzer Weinlesefest</h3>
+                    <p class="date">August 2025</p>
+                    <span class="category-badge">Events</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Objekte">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Corporate Headquarters">
+                <div class="project-overlay">
+                    <h3>Corporate Headquarters</h3>
+                    <p class="date">Mai 2025</p>
+                    <span class="category-badge">Objekte</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="VIP">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800" alt="CEO Protection Detail">
+                <div class="project-overlay">
+                    <h3>CEO Protection Detail</h3>
+                    <p class="date">April 2025</p>
+                    <span class="category-badge">VIP</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Events">
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800" alt="Salzburg Sports Event">
+                <div class="project-overlay">
+                    <h3>Salzburg Sports Event</h3>
+                    <p class="date">März 2025</p>
+                    <span class="category-badge">Events</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Objekte">
+                <img src="https://images.unsplash.com/photo-1555636222-cae831e670b3?w=800" alt="Shopping Center Security">
+                <div class="project-overlay">
+                    <h3>Shopping Center Security</h3>
+                    <p class="date">Februar 2025</p>
+                    <span class="category-badge">Objekte</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="VIP">
+                <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800" alt="Diplomatic Protection">
+                <div class="project-overlay">
+                    <h3>Diplomatic Protection</h3>
+                    <p class="date">Januar 2025</p>
+                    <span class="category-badge">VIP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="careers">
+        <div class="section-header">
+            <h2>KARRIERE</h2>
+            <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-top: 1rem;">
+                Werde Teil unseres Teams - Sicherheit ist unsere Leidenschaft
+            </p>
+        </div>
+        <div class="jobs-grid">
+            <!-- Job Card -->
+            <div class="job-card" data-job-id="1">
+                <div class="icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Sicherheitsmitarbeiter (m/w/d)</h3>
+                <p class="job-description">Bewachung und Absicherung von Events und Veranstaltungen</p>
+                <div class="job-meta">
+                    <span class="job-location">
+                        <i class="fas fa-map-marker-alt"></i> Graz
+                    </span>
+                    <span class="job-type">Vollzeit / Teilzeit / Geringfügig</span>
+                </div>
+                <button class="job-btn">
+                    Details ansehen <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Modal -->
+    <div class="job-modal" id="jobModal">
+        <div class="job-modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <h2>Sicherheitsmitarbeiter (m/w/d)</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Graz</span>
+                    <span><i class="fas fa-clock"></i> Vollzeit / Teilzeit / Geringfügig</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3><i class="fas fa-briefcase"></i> Aufgaben</h3>
+                    <ul>
+                        <li>Überwachung und Kontrolle von Gebäuden und Außenanlagen</li>
+                        <li>Zugangskontrollen und Besucherempfang</li>
+                        <li>Durchführung von Personendurchsuchungen</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fas fa-user-check"></i> Anforderungen</h3>
+                    <ul>
+                        <li>Gute Deutschkenntnisse</li>
+                        <li>Einwandfreies Führungszeugnis</li>
+                        <li>Zuverlässigkeit und Verantwortungsbewusstsein</li>
+                        <li>Bereitschaft zu Wochenenddiensten</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fas fa-star"></i> Wir bieten</h3>
+                    <ul>
+                        <li>Langfristige und sichere Anstellung</li>
+                        <li>Kollegiales Arbeitsumfeld</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <p><strong>Interesse geweckt?</strong> Sende deine Bewerbung an:</p>
+                <a href="mailto:office@sre-services.at?subject=Bewerbung: Sicherheitsmitarbeiter" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Jetzt bewerben
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <h2>KUNDENSTIMMEN</h2>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial-card active">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Professionell, zuverlässig und immer erreichbar. SRE Security hat unsere Großveranstaltung perfekt abgesichert."</p>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Michael Weber" class="author-photo">
+                    <div class="author-info">
+                        <h4>Michael Weber</h4>
+                        <p>Event Management GmbH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Seit wir mit SRE arbeiten, fühlen wir uns rundum sicher. Absolute Empfehlung!"</p>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/150?img=47" alt="Sarah Gruber" class="author-photo">
+                    <div class="author-info">
+                        <h4>Sarah Gruber</h4>
+                        <p>Immobilien AG</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Kompetente Beratung und schnelle Umsetzung. Genau das, was wir gesucht haben."</p>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/150?img=33" alt="Thomas Maier" class="author-photo">
+                    <div class="author-info">
+                        <h4>Thomas Maier</h4>
+                        <p>Tech Solutions OG</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="slider-arrow" id="prevSlide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+            </div>
+            <button class="slider-arrow" id="nextSlide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>KONTAKT</h2>
+        </div>
+        <div class="contact-content">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service</label>
+                    <select id="service" name="service">
+                        <option value="">Bitte wählen</option>
+                        <option value="objektschutz">Objektschutz</option>
+                        <option value="event">Event Security</option>
+                        <option value="vip">VIP-Services</option>
+                        <option value="mobile">Sicherheitsberatung</option>
+                        <option value="verkehr">Verkehrsregelung</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        Ich akzeptiere die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn submit-btn">Anfrage senden</button>
+            </form>
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h3>Adresse</h3>
+                        <p>Lortzinggasse 16<br>8041 Graz, Österreich</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <h3>Telefon</h3>
+                        <a href="tel:+431234567890">+43 1 234 567 890</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:office@sre-services.at">office@sre-services.at</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h3>Öffnungszeiten</h3>
+                        <p>Mo-Fr: 08:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                    <img src="assets/logo.svg" alt="SRE Security Logo" class="logo-icon" width="35" height="35">
+                    <h3 style="margin: 0;">SRE <span style="color: var(--brand-orange);">SECURITY</span></h3>
+                </div>
+                <p>Ihr verlässlicher Partner für professionelle Sicherheitsdienstleistungen in Österreich.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">Über Uns</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#careers">Karriere</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontakt</h3>
+                <p>Lortzinggasse 16<br>8041 Graz, Österreich</p>
+                <p><a href="tel:+431234567890">+43 1 234 567 890</a></p>
+                <p><a href="mailto:office@sre-services.at">office@sre-services.at</a></p>
+            </div>
+        </div>
+        <div class="trust-badges">
+            <i class="fas fa-shield-alt badge"></i>
+            <i class="fas fa-certificate badge"></i>
+            <i class="fas fa-award badge"></i>
+            <i class="fas fa-check-circle badge"></i>
+        </div>
+        <div class="copyright">
+            © 2025 SRE Security. Alle Rechte vorbehalten.
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

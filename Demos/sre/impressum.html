@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - SRE Security</title>
+    <meta name="description" content="Impressum und rechtliche Informationen von SRE Security GmbH">
+
+    <!-- Password Protection Check -->
+    <script>
+        const isAuthenticated = sessionStorage.getItem('sre_authenticated') === 'true';
+        if (!isAuthenticated) {
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .legal-page {
+            min-height: 100vh;
+            background: var(--deep-black);
+            padding: 100px 5% 60px;
+        }
+
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(238, 129, 47, 0.2);
+            border-radius: 16px;
+            padding: 3rem;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(238, 129, 47, 0.3);
+        }
+
+        .legal-header .logo-small {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        .legal-header h1 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-header h1 span {
+            color: var(--brand-orange);
+        }
+
+        .legal-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+
+        .legal-content h2 {
+            color: var(--brand-orange);
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(238, 129, 47, 0.1);
+        }
+
+        .legal-content h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .legal-content h3 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        .legal-content p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-content a {
+            color: var(--brand-orange);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .legal-content a:hover {
+            color: var(--orange-hover);
+            text-decoration: underline;
+        }
+
+        .info-box {
+            background: rgba(238, 129, 47, 0.1);
+            border-left: 4px solid var(--brand-orange);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box p {
+            margin: 0;
+        }
+
+        .info-box strong {
+            color: var(--brand-orange);
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--brand-orange);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            background: var(--orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(238, 129, 47, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .legal-page {
+                padding: 80px 5% 40px;
+            }
+
+            .legal-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .legal-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="legal-page">
+        <div class="legal-container">
+            <div class="legal-header">
+                <img src="assets/logo.svg" alt="SRE Security Logo" class="logo-small">
+                <h1>SRE <span>SECURITY</span></h1>
+                <p>Impressum</p>
+            </div>
+
+            <div class="legal-content">
+                <div class="info-box">
+                    <p><strong><i class="fas fa-info-circle"></i> Hinweis:</strong> Dies ist eine Demo-Website. Alle Angaben sind beispielhaft und müssen bei echtem Einsatz durch reale Firmendaten ersetzt werden.</p>
+                </div>
+
+                <h2>Informationspflicht laut § 5 ECG, § 14 UGB, § 63 GewO und Offenlegungspflicht laut § 25 MedienG</h2>
+
+                <h3>Firmenname und Rechtsform</h3>
+                <p>
+                    SRE Security GmbH<br>
+                    Gewerbliches Sicherheitsunternehmen
+                </p>
+
+                <h3>Firmensitz und Geschäftsanschrift</h3>
+                <p>
+                    Musterstraße 123<br>
+                    1010 Wien<br>
+                    Österreich
+                </p>
+
+                <h3>Kontaktdaten</h3>
+                <p>
+                    <strong>Telefon:</strong> <a href="tel:+431234567890">+43 1 234 567 890</a><br>
+                    <strong>E-Mail:</strong> <a href="mailto:office@sre-security.at">office@sre-security.at</a><br>
+                </p>
+
+                <h3>Unternehmensgegenstand</h3>
+                <p>
+                    Gewerbliches Sicherheitsgewerbe gemäß § 94 Z 79 GewO 1994<br>
+                    Objektschutz, Event Security, VIP-Schutz, Mobile Streifen, Sicherheitsberatung
+                </p>
+
+                <h3>Behörde / Gewerbebehörde</h3>
+                <p>
+                    Magistrat der Stadt Wien<br>
+                    Magistratisches Bezirksamt des 1. Bezirks
+                </p>
+
+                <h3>Berufsrecht</h3>
+                <p>
+                    Gewerbeordnung: <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a>
+                </p>
+
+                <h3>Unternehmensrechtliche Angaben</h3>
+                <p>
+                    <strong>Firmenbuchnummer:</strong> FN 123456a<br>
+                    <strong>Firmenbuchgericht:</strong> Handelsgericht Wien<br>
+                    <strong>UID-Nummer:</strong> ATU12345678<br>
+                    <strong>GLN:</strong> 1234567890123
+                </p>
+
+                <h3>Geschäftsführung</h3>
+                <p>
+                    Max Mustermann (Geschäftsführer)<br>
+                    Maria Musterfrau (Prokuristin)
+                </p>
+
+                <h3>Kammer</h3>
+                <p>
+                    Mitglied der Wirtschaftskammer Wien<br>
+                    Fachgruppe: Bewachungsgewerbe
+                </p>
+
+                <h3>Berufsbezeichnung</h3>
+                <p>
+                    Bewachungsgewerbe<br>
+                    Verliehen in Österreich
+                </p>
+
+                <h3>Gewerbeaufsichtsbehörde</h3>
+                <p>
+                    Magistrat der Stadt Wien<br>
+                    Magistratisches Bezirksamt des 1. Bezirks
+                </p>
+
+                <h2>Haftung für Inhalte dieser Website</h2>
+
+                <p>
+                    Wir entwickeln die Inhalte dieser Website ständig weiter und bemühen uns korrekte und aktuelle Informationen bereitzustellen. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Website übernehmen, speziell für jene, die seitens Dritter bereitgestellt wurden. Als Diensteanbieter sind wir nicht verpflichtet, die von ihnen übermittelten oder gespeicherten Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                </p>
+
+                <p>
+                    Unsere Verpflichtungen zur Entfernung von Informationen oder zur Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen aufgrund von gerichtlichen oder behördlichen Anordnungen bleiben auch im Falle unserer Nichtverantwortlichkeit davon unberührt.
+                </p>
+
+                <p>
+                    Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitte wir Sie uns umgehend zu kontaktieren, damit wir die rechtswidrigen Inhalte entfernen können. Sie finden die Kontaktdaten im Impressum.
+                </p>
+
+                <h2>Haftung für Links auf dieser Website</h2>
+
+                <p>
+                    Unsere Website enthält Links zu anderen Websites für deren Inhalt wir nicht verantwortlich sind. Haftung für verlinkte Websites besteht für uns nicht, da wir keine Kenntnis rechtswidriger Tätigkeiten hatten und haben, uns solche Rechtswidrigkeiten auch bisher nicht aufgefallen sind und wir Links sofort entfernen würden, wenn uns Rechtswidrigkeiten bekannt werden.
+                </p>
+
+                <p>
+                    Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitte wir Sie uns zu kontaktieren. Sie finden die Kontaktdaten im Impressum.
+                </p>
+
+                <h2>Urheberrechtshinweis</h2>
+
+                <p>
+                    Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. Bitte fragen Sie uns bevor Sie die Inhalte dieser Website verbreiten, vervielfältigen oder verwerten wie zum Beispiel auf anderen Websites erneut veröffentlichen. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen.
+                </p>
+
+                <p>
+                    Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.
+                </p>
+
+                <h2>Bildernachweis</h2>
+
+                <p>
+                    Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.
+                </p>
+
+                <p>
+                    Die Bilderrechte liegen bei folgenden Fotografen und Unternehmen:
+                </p>
+
+                <ul>
+                    <li>SRE Security GmbH</li>
+                    <li>Unsplash (freie Lizenz)</li>
+                    <li>Pravatar (Avatar-Bilder)</li>
+                </ul>
+
+                <h2>EU-Streitschlichtung</h2>
+
+                <p>
+                    Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.
+                </p>
+
+                <p>
+                    Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=DE" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a> zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum.
+                </p>
+
+                <p>
+                    Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+
+                <h2>Haftung für Inhalte dieser Website</h2>
+
+                <p>
+                    Wir entwickeln die Inhalte dieser Website ständig weiter und bemühen uns korrekte und aktuelle Informationen bereitzustellen. Laut Telemediengesetz (TMG) §7 (1) sind wir als Diensteanbieter für eigene Informationen, die wir zur Nutzung bereitstellen, nach den allgemeinen Gesetzen verantwortlich. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Website übernehmen, speziell für jene, die seitens Dritter bereitgestellt wurden.
+                </p>
+
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Zurück zur Startseite
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Button -->
+    <button id="logout-btn" style="position: fixed; top: 20px; right: 20px; background: rgba(238, 129, 47, 0.9); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; z-index: 10001; font-weight: 600;">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+
+    <script>
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            sessionStorage.removeItem('sre_authenticated');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

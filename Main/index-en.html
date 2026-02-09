@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Essential SEO -->
+    <meta name="description" content="Professional Web Development & Consulting for your business. Modern, performant, optimized. Dornerlabs – Your partner for digital solutions.">
+    <meta name="keywords" content="Web Development, Consulting, Business Website, Portfolio, Dornerlabs">
+    <meta name="author" content="Dornerlabs">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Social Media) -->
+    <meta property="og:title" content="Dornerlabs – Web Development & Consulting">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dornerlabs.com/assets/og-image.webp">
+    <meta property="og:url" content="https://dornerlabs.com/index-en.html">
+    <meta property="og:site_name" content="Dornerlabs">
+    <meta property="og:description" content="Professional Web Development & Consulting for your business. Modern, performant, optimized.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dornerlabs – Web Development & Consulting">
+    <meta name="twitter:description" content="Professional Web Development & Consulting for your business.">
+    <meta name="twitter:image" content="https://dornerlabs.com/assets/og-image.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dornerlabs.com/index-en.html">
+
+    <!-- Hreflang for Bilingual Support -->
+    <link rel="alternate" hreflang="de" href="https://dornerlabs.com/index.html">
+    <link rel="alternate" hreflang="en" href="https://dornerlabs.com/index-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://dornerlabs.com/index.html">
+
+    <title>Dornerlabs – Web Development & Consulting for Your Business</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://portfolio.dornerlabs.com/assets/icon/dornerlabs-icon-dark.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://portfolio.dornerlabs.com/assets/icon/dornerlabs-icon-dark.ico">
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+
+    <!-- Preload fonts -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Critical CSS - Inlined for faster initial render -->
+    <style>
+        /* Reset & Base */
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --primary-color:#0066ff;
+            --secondary-color:#6366f1;
+            --accent-color:#10b981;
+            --bg-light:#ffffff;
+            --bg-lighter:#f9fafb;
+            --bg-card:#f3f4f6;
+            --text-primary:#111827;
+            --text-secondary:#6b7280;
+            --text-muted:#9ca3af;
+            --border-color:#e5e7eb;
+        }
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg-light);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+        body.menu-open{overflow:hidden}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+        /* Navigation */
+        .navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;border-bottom:1px solid var(--border-color);transition:all 0.3s ease}
+        .navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.1)}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.5rem;font-weight:bold;color:var(--primary-color);font-family:monospace}
+        .nav-menu{display:flex;list-style:none;gap:2rem;align-items:center}
+        .nav-link{color:var(--text-primary);text-decoration:none;transition:color 0.3s ease;padding:0.5rem 0}
+        .nav-link:hover,.nav-link:focus{color:var(--primary-color)}
+        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1001}
+        .hamburger span{width:25px;height:3px;background:var(--primary-color);border-radius:3px;transition:all 0.3s ease}
+        /* Hero Section - Above the fold */
+        .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 0 4rem;background:linear-gradient(135deg,var(--bg-lighter) 0%,var(--bg-light) 100%)}
+        .hero-content{text-align:center;max-width:800px}
+        .hero-title{font-size:3.5rem;line-height:1.2;margin-bottom:1.5rem;font-weight:700}
+        .highlight{color:var(--primary-color)}
+    </style>
+
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dornerlabs",
+      "url": "https://dornerlabs.com",
+      "logo": "https://portfolio.dornerlabs.com/assets/icon/dornerlabs-icon-dark.ico",
+      "description": "Professional web development and consulting for modern business applications.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "matthias.dorner@dornerlabs.com",
+        "availableLanguage": ["German", "English"]
+      },
+      "sameAs": [
+        "https://github.com/MatzeTV-dev"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DE"
+      }
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Development",
+      "provider": {
+        "@type": "Organization",
+        "name": "Dornerlabs"
+      },
+      "areaServed": "DE",
+      "description": "Professional web development with focus on performance and modern technologies."
+    }
+    </script>
+
+</head>
+<body>
+    <!-- SEO H1 - visually hidden but accessible to search engines and screen readers -->
+    <h1 class="sr-only">Dornerlabs – Web Development & Consulting for Your Business</h1>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">&lt;DL&gt;</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="language-switcher">
+                    <a href="index.html" class="lang-link" hreflang="de">DE</a>
+                    <span class="separator">|</span>
+                    <a href="index-en.html" class="lang-link active" hreflang="en">EN</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    <span class="highlight">Web Development</span> & Consulting<br>for Your Business
+                </h2>
+                <p class="hero-subtitle">
+                    Professional websites and technical consulting – from idea to launch. Modern, performant, and scalable.
+                </p>
+                <a href="#contact" class="cta-button cta-primary">
+                    Discuss Project
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">What we can do for you</p>
+
+                <div class="services-grid">
+                    <!-- Web Development -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p class="service-description">
+                            Custom web applications with modern technologies. From simple business websites to complex business applications.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Responsive design for all devices</li>
+                            <li><i class="fas fa-check"></i> Performance optimization (Core Web Vitals)</li>
+                            <li><i class="fas fa-check"></i> SEO & GEO integration</li>
+                            <li><i class="fas fa-check"></i> Security best practices</li>
+                            <li><i class="fas fa-check"></i> E-commerce solutions</li>
+                        </ul>
+                        <a href="#contact" class="btn-secondary">Request Details</a>
+                    </article>
+
+                    <!-- Consulting -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Consulting</h3>
+                        <p class="service-description">
+                            Technical consulting for your digital project. We help you choose the right technologies and architecture.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Technology consulting</li>
+                            <li><i class="fas fa-check"></i> Architecture design</li>
+                            <li><i class="fas fa-check"></i> Code review & optimization</li>
+                            <li><i class="fas fa-check"></i> Performance audit</li>
+                            <li><i class="fas fa-check"></i> Security audit</li>
+                        </ul>
+                        <a href="#contact" class="btn-secondary">Request Details</a>
+                    </article>
+
+                    <!-- Workflow Automation -->
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Workflow Automation</h3>
+                        <p class="service-description">
+                            Automate your business processes for greater efficiency. From simple workflows to complete process automation.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Process analysis & optimization</li>
+                            <li><i class="fas fa-check"></i> API integrations</li>
+                            <li><i class="fas fa-check"></i> Workflow engines (Zapier, Make, n8n)</li>
+                            <li><i class="fas fa-check"></i> Custom automation scripts</li>
+                            <li><i class="fas fa-check"></i> Monitoring & reporting</li>
+                        </ul>
+                        <a href="#contact" class="btn-secondary">Request Details</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2 class="section-title">Pricing & Packages</h2>
+                <p class="section-subtitle">Transparent pricing for every budget</p>
+
+                <div class="pricing-grid">
+                    <!-- Starter Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <div class="price">
+                                <span class="price-amount">From €1,499</span>
+                                <span class="price-period">one-time</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> One-page website</li>
+                            <li><i class="fas fa-check"></i> Responsive design</li>
+                            <li><i class="fas fa-check"></i> Contact form</li>
+                            <li><i class="fas fa-check"></i> SEO optimization</li>
+                            <li><i class="fas fa-check"></i> 1 month support</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Package</a>
+                    </div>
+
+                    <!-- Professional Package -->
+                    <div class="pricing-card featured">
+                        <div class="badge">Popular</div>
+                        <div class="pricing-header">
+                            <h3>Professional</h3>
+                            <div class="price">
+                                <span class="price-amount">From €3,999</span>
+                                <span class="price-period">one-time</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Multi-page website</li>
+                            <li><i class="fas fa-check"></i> Custom design</li>
+                            <li><i class="fas fa-check"></i> CMS integration</li>
+                            <li><i class="fas fa-check"></i> Advanced SEO & GEO</li>
+                            <li><i class="fas fa-check"></i> E-commerce (optional)</li>
+                            <li><i class="fas fa-check"></i> 3 months support</li>
+                        </ul>
+                        <a href="#contact" class="cta-button cta-primary">Choose Package</a>
+                    </div>
+
+                    <!-- Enterprise Package -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <div class="price">
+                                <span class="price-amount">On Request</span>
+                                <span class="price-period">custom</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Complex web application</li>
+                            <li><i class="fas fa-check"></i> Custom development</li>
+                            <li><i class="fas fa-check"></i> API integration</li>
+                            <li><i class="fas fa-check"></i> Scalable architecture</li>
+                            <li><i class="fas fa-check"></i> Dedicated support</li>
+                            <li><i class="fas fa-check"></i> SLA guaranteed</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="clients">
+            <div class="container">
+                <h2 class="section-title">Trusted by</h2>
+                <p class="section-subtitle">Clients who already work with us</p>
+
+                <div class="clients-slider">
+                    <div class="clients-track">
+                        <!-- Client Logos - Duplicated for infinite scroll -->
+                        <div class="client-logo">
+                            <img src="assets/companies/Clubmatch.png" alt="ClubMatch" height="60">
+                            <span class="client-name">ClubMatch</span>
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/Bravodesk.png" alt="BravoDesk" height="60">
+                            <span class="client-name">BravoDesk</span>
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/TapLock.png" alt="TapLock" height="60">
+                            <span class="client-name">TapLock</span>
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/SpaceX.webp" alt="SpaceX" height="60">
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/KNAPP.jpg" alt="KNAPP" height="60">
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/Nasa.png" alt="NASA" height="60">
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="client-logo">
+                            <img src="assets/companies/Clubmatch.png" alt="ClubMatch" height="60">
+                            <span class="client-name">ClubMatch</span>
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/Bravodesk.png" alt="BravoDesk" height="60">
+                            <span class="client-name">BravoDesk</span>
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/TapLock.png" alt="TapLock" height="60">
+                            <span class="client-name">TapLock</span>
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/SpaceX.webp" alt="SpaceX" height="60">
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/KNAPP.jpg" alt="KNAPP" height="60">
+                        </div>
+                        <div class="client-logo">
+                            <img src="assets/companies/Nasa.png" alt="NASA" height="60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Case Studies Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-subtitle">Projects we've realized</p>
+
+                <div class="portfolio-grid">
+                    <!-- Portfolio Site -->
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://portfolio.dornerlabs.com/assets/Pic.webp" alt="Portfolio Website" width="400" height="300">
+                            <div class="portfolio-overlay">
+                                <a href="https://portfolio.dornerlabs.com" class="portfolio-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Developer Portfolio</h3>
+                            <p>Modern portfolio website with performance focus, dark mode, and interactive animations.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Sites -->
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://demos.dornerlabs.com/screenshots/handwerk-thumb.webp" alt="Business Demos" width="400" height="300" onerror="this.src='https://portfolio.dornerlabs.com/assets/Pic.webp'">
+                            <div class="portfolio-overlay">
+                                <a href="https://demos.dornerlabs.com" class="portfolio-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Business Templates</h3>
+                            <p>6 professional business website templates for various industries (restaurant, car dealership, café, etc.).</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Responsive</span>
+                                <span class="tech-tag">SEO</span>
+                                <span class="tech-tag">Modern</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ClubMatch -->
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://portfolio.dornerlabs.com/assets/projects/clubmatch-logo.webp" alt="ClubMatch - Party App" width="400" height="300" onerror="this.src='https://portfolio.dornerlabs.com/assets/Pic.webp'">
+                            <div class="portfolio-overlay">
+                                <a href="https://clubmatch.party/" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> View
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>ClubMatch</h3>
+                            <p>Party app for event discovery (16-30 years). Built like TikTok and Tinder, while organizers gain free reach.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">Expo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BravoDesk -->
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://portfolio.dornerlabs.com/assets/projects/bravodesk-logo.webp" alt="BravoDesk - AI Discord Ticket System" width="400" height="300" onerror="this.src='https://portfolio.dornerlabs.com/assets/Pic.webp'">
+                            <div class="portfolio-overlay">
+                                <a href="https://github.com/MatzeTV-dev/BravoDesk" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>BravoDesk</h3>
+                            <p>AI-powered Discord ticket system with context-aware AI for automated user support in communities.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">OpenAI</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">REST-API</span>
+                                <span class="tech-tag">NodeJS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-cta-section">
+                    <a href="https://portfolio.dornerlabs.com" class="btn-secondary" target="_blank">
+                        View Full Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">Let's talk about your project</p>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Have questions or want to discuss a project? Contact us!</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:matthias.dorner@dornerlabs.com">matthias.dorner@dornerlabs.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Austria</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/MatzeTV-dev" target="_blank">github.com/MatzeTV-dev</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" action="https://formspree.io/f/YOUR_ID" method="POST">
+                            <!-- Honeypot (hidden from real users, bots fill it) -->
+                            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required minlength="2" placeholder="Your Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service</label>
+                                <select id="service" name="service">
+                                    <option value="webdev">Web Development</option>
+                                    <option value="consulting">Consulting</option>
+                                    <option value="both">Both</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required minlength="10" maxlength="5000" rows="6" placeholder="Describe your project..."></textarea>
+                            </div>
+
+                            <button type="submit" class="cta-button cta-primary">
+                                Send Message
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">&lt;DL&gt;</div>
+                    <p>Dornerlabs – Your partner for Web Development & Consulting</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="impressum.html">Imprint</a></li>
+                        <li><a href="datenschutz.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Language</h4>
+                    <div class="footer-language">
+                        <a href="index.html">Deutsch</a>
+                        <span>|</span>
+                        <a href="index-en.html" class="active">English</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dornerlabs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>

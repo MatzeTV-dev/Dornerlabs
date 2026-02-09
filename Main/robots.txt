@@ -1,0 +1,12 @@
+# Robots.txt for Dornerlabs
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dornerlabs.com/sitemap.xml
+
+# Optional: Disallow specific directories (if needed in future)
+# Disallow: /admin/
+# Disallow: /private/

@@ -32,8 +32,6 @@
         body.menu-open{overflow:hidden}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
         .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
-        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary-color);color:var(--bg-dark);padding:8px 16px;text-decoration:none;font-weight:bold;z-index:10000;border-radius:0 0 4px 0}
-        .skip-link:focus{top:0}
         /* Navigation */
         .navbar{position:fixed;top:0;width:100%;background:rgba(10,14,39,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;border-bottom:1px solid rgba(0,255,136,0.1);transition:all 0.3s ease}
         .navbar.scrolled{box-shadow:0 5px 30px rgba(0,255,136,0.1)}
@@ -55,16 +53,12 @@
         .image-frame img{width:100%;height:auto;border-radius:10px;position:relative;z-index:1}
     </style>
 
-    <!-- Non-critical CSS - Deferred loading -->
-    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
-
-    <link rel="preload" href="css/custom-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/custom-icons.css"></noscript>
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-icons.css">
 
     <!-- Devicon for C, C++, C# icons only -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <!-- Font Display Optimization -->
     <style>
@@ -95,9 +89,6 @@
 
 </head>
 <body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-
     <!-- SEO H1 - visually hidden but accessible to search engines and screen readers -->
     <h1 class="sr-only">Matthias Dorner - Software Developer & AI Entwickler Portfolio</h1>
 
@@ -498,9 +489,9 @@
                 <!-- Handwerksbetrieb -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/handwerk-thumb.webp" alt="Schreinerei Mustermann - Demo-Website für Handwerksbetriebe mit Kontaktformular und Google Maps" width="600" height="400">
+                        <img src="https://demos.dornerlabs.com/screenshots/handwerk-thumb.webp" alt="Schreinerei Mustermann - Demo-Website für Handwerksbetriebe mit Kontaktformular und Google Maps" width="600" height="400">
                         <div class="showcase-overlay">
-                            <a href="demos/handwerk/index.html" target="_blank" class="showcase-btn">
+                            <a href="https://demos.dornerlabs.com/handwerk/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -521,9 +512,9 @@
                 <!-- Café/Bar -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/cafe-thumb.webp" alt="Café Gemütlich - Demo-Website für Cafés und Bars mit Menü-Präsentation und Buchung" width="600" height="400">
+                        <img src="https://demos.dornerlabs.com/screenshots/cafe-thumb.webp" alt="Café Gemütlich - Demo-Website für Cafés und Bars mit Menü-Präsentation und Buchung" width="600" height="400">
                         <div class="showcase-overlay">
-                            <a href="demos/cafe/index.html" target="_blank" class="showcase-btn">
+                            <a href="https://demos.dornerlabs.com/cafe/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -544,9 +535,9 @@
                 <!-- Restaurant -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/restaurant-thumb.webp" alt="Restaurant Bella Vista - Demo-Website für italienische Restaurants mit Speisekarte und Reservierung" width="600" height="400">
+                        <img src="https://demos.dornerlabs.com/screenshots/restaurant-thumb.webp" alt="Restaurant Bella Vista - Demo-Website für italienische Restaurants mit Speisekarte und Reservierung" width="600" height="400">
                         <div class="showcase-overlay">
-                            <a href="demos/restaurant/index.html" target="_blank" class="showcase-btn">
+                            <a href="https://demos.dornerlabs.com/restaurant/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -567,9 +558,9 @@
                 <!-- Friseur -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/friseur-thumb.webp" alt="Salon Styles - Demo-Website für Friseursalons mit Service-Übersicht und Terminbuchung" width="600" height="400">
+                        <img src="https://demos.dornerlabs.com/screenshots/friseur-thumb.webp" alt="Salon Styles - Demo-Website für Friseursalons mit Service-Übersicht und Terminbuchung" width="600" height="400">
                         <div class="showcase-overlay">
-                            <a href="demos/friseur/index.html" target="_blank" class="showcase-btn">
+                            <a href="https://demos.dornerlabs.com/friseur/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -590,9 +581,9 @@
                 <!-- Bäckerei -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/baeckerei-thumb.webp" alt="Bäckerei Frischbrot - Demo-Website für Handwerksbäckereien mit Produktübersicht und Angeboten" width="600" height="400">
+                        <img src="https://demos.dornerlabs.com/screenshots/baeckerei-thumb.webp" alt="Bäckerei Frischbrot - Demo-Website für Handwerksbäckereien mit Produktübersicht und Angeboten" width="600" height="400">
                         <div class="showcase-overlay">
-                            <a href="demos/baeckerei/index.html" target="_blank" class="showcase-btn">
+                            <a href="https://demos.dornerlabs.com/baeckerei/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -613,9 +604,9 @@
                 <!-- Autohaus -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/autohaus-thumb.webp" alt="Autohaus Müller - Demo-Website für Autohäuser mit Fahrzeugpräsentation und Werkstatt-Service" width="600" height="400">
+                        <img src="https://demos.dornerlabs.com/screenshots/autohaus-thumb.webp" alt="Autohaus Müller - Demo-Website für Autohäuser mit Fahrzeugpräsentation und Werkstatt-Service" width="600" height="400">
                         <div class="showcase-overlay">
-                            <a href="demos/autohaus/index.html" target="_blank" class="showcase-btn">
+                            <a href="https://demos.dornerlabs.com/autohaus/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -632,14 +623,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="showcase-cta">
-                <h3>Interessiert an einer professionellen Website für dein Unternehmen?</h3>
-                <p>Kontaktiere mich für ein unverbindliches Beratungsgespräch!</p>
-                <a href="https://n8n.srv1028372.hstgr.cloud/form/contact" class="cta-button" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-envelope"></i> Jetzt Kontakt aufnehmen
-                </a>
             </div>
         </div>
     </section>
