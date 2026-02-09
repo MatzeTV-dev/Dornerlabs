@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant Bella Vista - Authentische italienische Küche mit transparenten Preisen und einfacher Online-Reservierung">
+    <title>Restaurant Bella Vista - Authentische italienische Küche</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Bella Vista</span>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Speisekarte</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#reservation">Reservierung</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Restaurant Bella Vista</h1>
+                <p class="hero-subtitle">Authentische italienische Küche</p>
+                <p class="hero-description">Erleben Sie die Aromen Italiens in unserem gemütlichen Restaurant</p>
+                <a href="#menu" class="btn btn-primary">
+                    <i class="fas fa-book-open"></i>
+                    Speisekarte ansehen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Reservation Button -->
+    <a href="#reservation" class="sticky-reserve-btn" id="stickyBtn">
+        <i class="fas fa-calendar-check"></i>
+        <span>Jetzt reservieren</span>
+    </a>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Unsere Speisekarte</h2>
+            <p class="section-subtitle">Frisch zubereitet mit den besten Zutaten</p>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="starters">
+                    <i class="fas fa-salad"></i>
+                    Vorspeisen
+                </button>
+                <button class="tab-btn" data-tab="mains">
+                    <i class="fas fa-pizza-slice"></i>
+                    Hauptspeisen
+                </button>
+                <button class="tab-btn" data-tab="desserts">
+                    <i class="fas fa-ice-cream"></i>
+                    Desserts
+                </button>
+                <button class="tab-btn" data-tab="drinks">
+                    <i class="fas fa-wine-glass"></i>
+                    Getränke
+                </button>
+            </div>
+
+            <!-- Menu Content -->
+            <div class="menu-content">
+                <!-- Starters -->
+                <div class="menu-category active" id="starters" data-category="starters">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Bruschetta Classica</h3>
+                                <p class="menu-item-description">Geröstetes Ciabatta-Brot mit frischen Tomaten, Basilikum, Knoblauch und Olivenöl</p>
+                                <div class="menu-item-price">€ 8,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Carpaccio di Manzo</h3>
+                                <p class="menu-item-description">Hauchdünnes Rindfleisch mit Rucola, Parmesan und Balsamico-Creme</p>
+                                <div class="menu-item-price">€ 14,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-cheese"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Caprese</h3>
+                                <p class="menu-item-description">Tomaten-Mozzarella mit frischem Basilikum und Olivenöl</p>
+                                <div class="menu-item-price">€ 9,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-shrimp"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Gamberoni all'Aglio</h3>
+                                <p class="menu-item-description">Riesengarnelen in Knoblauch-Weißwein-Sauce mit Brot</p>
+                                <div class="menu-item-price">€ 16,90</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mains -->
+                <div class="menu-category" id="mains" data-category="mains">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-pizza-slice"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Pizza Margherita</h3>
+                                <p class="menu-item-description">Tomatensauce, Mozzarella, frisches Basilikum, Olivenöl</p>
+                                <div class="menu-item-price">€ 11,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-pizza-slice"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Pizza Quattro Formaggi</h3>
+                                <p class="menu-item-description">Mozzarella, Gorgonzola, Parmesan, Pecorino</p>
+                                <div class="menu-item-price">€ 14,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-drumstick-bite"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Saltimbocca alla Romana</h3>
+                                <p class="menu-item-description">Kalbsschnitzel mit Parmaschinken und Salbei, Risotto</p>
+                                <div class="menu-item-price">€ 24,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-fish"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Branzino al Forno</h3>
+                                <p class="menu-item-description">Ofenfrischer Wolfsbarsch mit mediterranem Gemüse und Kartoffeln</p>
+                                <div class="menu-item-price">€ 28,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Spaghetti Carbonara</h3>
+                                <p class="menu-item-description">Mit Guanciale, Ei, Pecorino Romano nach original römischem Rezept</p>
+                                <div class="menu-item-price">€ 15,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Risotto ai Funghi</h3>
+                                <p class="menu-item-description">Cremiges Risotto mit gemischten Waldpilzen und Parmesan</p>
+                                <div class="menu-item-price">€ 18,90</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-category" id="desserts" data-category="desserts">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-ice-cream"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Tiramisu</h3>
+                                <p class="menu-item-description">Klassisches italienisches Dessert mit Mascarpone, Espresso und Kakao</p>
+                                <div class="menu-item-price">€ 7,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-cookie"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Panna Cotta</h3>
+                                <p class="menu-item-description">Vanille-Sahne-Pudding mit Beerensauce</p>
+                                <div class="menu-item-price">€ 6,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-lemon"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Lemon Sorbet</h3>
+                                <p class="menu-item-description">Hausgemachtes Zitronen-Sorbet serviert in der Frucht</p>
+                                <div class="menu-item-price">€ 5,90</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Tartufo Nero</h3>
+                                <p class="menu-item-description">Schokoladen-Eis-Trüffel mit Kirschfüllung und Sahne</p>
+                                <div class="menu-item-price">€ 8,90</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-category" id="drinks" data-category="drinks">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-wine-glass"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Chianti Classico</h3>
+                                <p class="menu-item-description">Rotwein aus der Toskana (0,75l)</p>
+                                <div class="menu-item-price">€ 32,00</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-wine-glass"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Pinot Grigio</h3>
+                                <p class="menu-item-description">Weißwein aus Venetien (0,75l)</p>
+                                <div class="menu-item-price">€ 28,00</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-champagne-glasses"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Prosecco</h3>
+                                <p class="menu-item-description">Perlwein aus Italien (0,75l)</p>
+                                <div class="menu-item-price">€ 24,00</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-mug-hot"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Espresso</h3>
+                                <p class="menu-item-description">Italienischer Espresso aus hauseigener Röstung</p>
+                                <div class="menu-item-price">€ 2,50</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-glass-water"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Acqua Minerale</h3>
+                                <p class="menu-item-description">Mineralwasser still oder sprudelnd (0,75l)</p>
+                                <div class="menu-item-price">€ 5,50</div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <i class="fas fa-wine-bottle"></i>
+                            </div>
+                            <div class="menu-item-content">
+                                <h3 class="menu-item-title">Limoncello</h3>
+                                <p class="menu-item-description">Hausgemachter Zitronenlikör (4cl)</p>
+                                <div class="menu-item-price">€ 4,50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Willkommen im Restaurant Bella Vista</h3>
+                    <p>Seit 1985 servieren wir authentische italienische Küche im Herzen der Stadt. Unser Restaurant ist ein Familienunternehmen, das Tradition mit modernen kulinarischen Einflüssen verbindet.</p>
+
+                    <p>Chefkoch Giovanni Rossi bringt über 30 Jahre Erfahrung aus verschiedenen Regionen Italiens mit. Seine Leidenschaft für frische, hochwertige Zutaten und traditionelle Zubereitungsmethoden spiegelt sich in jedem Gericht wider.</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-award"></i>
+                            <h4>Ausgezeichnete Qualität</h4>
+                            <p>Mehrfach prämiert für unsere authentische italienische Küche</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Frische Zutaten</h4>
+                            <p>Täglich frisch geliefert von ausgewählten regionalen Partnern</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Mit Liebe gemacht</h4>
+                            <p>Jedes Gericht wird mit Sorgfalt und Leidenschaft zubereitet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="chef-card">
+                        <div class="chef-icon">
+                            <i class="fas fa-user-chef"></i>
+                        </div>
+                        <h4>Giovanni Rossi</h4>
+                        <p class="chef-title">Chefkoch & Inhaber</p>
+                        <p class="chef-bio">"Kochen ist meine Leidenschaft. Ich möchte jedem Gast ein Stück Italien auf den Teller bringen."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section" id="reservation">
+        <div class="container">
+            <h2 class="section-title">Tisch reservieren</h2>
+            <p class="section-subtitle">Sichern Sie sich Ihren Tisch - schnell und einfach</p>
+
+            <div class="reservation-content">
+                <form class="reservation-form" id="reservationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i>
+                                Name *
+                            </label>
+                            <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                E-Mail *
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="ihre@email.de">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i>
+                                Telefon *
+                            </label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+49 123 456789">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">
+                                <i class="fas fa-users"></i>
+                                Anzahl Personen *
+                            </label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Bitte wählen</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Personen</option>
+                                <option value="3">3 Personen</option>
+                                <option value="4">4 Personen</option>
+                                <option value="5">5 Personen</option>
+                                <option value="6">6 Personen</option>
+                                <option value="7">7 Personen</option>
+                                <option value="8">8 Personen</option>
+                                <option value="more">Mehr als 8 Personen</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">
+                                <i class="fas fa-calendar"></i>
+                                Datum *
+                            </label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">
+                                <i class="fas fa-clock"></i>
+                                Uhrzeit *
+                            </label>
+                            <select id="time" name="time" required>
+                                <option value="">Bitte wählen</option>
+                                <option value="17:00">17:00 Uhr</option>
+                                <option value="17:30">17:30 Uhr</option>
+                                <option value="18:00">18:00 Uhr</option>
+                                <option value="18:30">18:30 Uhr</option>
+                                <option value="19:00">19:00 Uhr</option>
+                                <option value="19:30">19:30 Uhr</option>
+                                <option value="20:00">20:00 Uhr</option>
+                                <option value="20:30">20:30 Uhr</option>
+                                <option value="21:00">21:00 Uhr</option>
+                                <option value="21:30">21:30 Uhr</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i>
+                            Besondere Wünsche (optional)
+                        </label>
+                        <textarea id="message" name="message" rows="4" placeholder="z.B. Allergien, besondere Anlässe, bevorzugter Tisch..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span>Ich habe die <a href="#" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere diese. Meine Daten werden ausschließlich zur Bearbeitung meiner Reservierung verwendet und gemäß DSGVO verarbeitet. *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i>
+                        Tisch reservieren
+                    </button>
+
+                    <p class="form-note">* Pflichtfelder</p>
+                </form>
+
+                <div class="reservation-info">
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Reservierungshinweise</h3>
+                        <ul>
+                            <li>Reservierungen sind bis zu 3 Monate im Voraus möglich</li>
+                            <li>Für Gruppen ab 9 Personen kontaktieren Sie uns bitte telefonisch</li>
+                            <li>Sie erhalten eine Bestätigungsmail an die angegebene E-Mail-Adresse</li>
+                            <li>Bei Verspätung über 15 Minuten kann die Reservierung nicht garantiert werden</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Telefonische Reservierung</h3>
+                        <p class="phone-number">+49 (0) 30 1234 5678</p>
+                        <p>Montag - Sonntag: 11:00 - 22:00 Uhr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Kontakt & Öffnungszeiten</h2>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-block">
+                        <h3><i class="fas fa-map-marker-alt"></i> Adresse</h3>
+                        <p>Restaurant Bella Vista<br>
+                        Musterstraße 123<br>
+                        10115 Berlin<br>
+                        Deutschland</p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3><i class="fas fa-phone"></i> Telefon</h3>
+                        <p><a href="tel:+493012345678">+49 (0) 30 1234 5678</a></p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3><i class="fas fa-envelope"></i> E-Mail</h3>
+                        <p><a href="mailto:info@bella-vista.de">info@bella-vista.de</a></p>
+                    </div>
+
+                    <div class="info-block opening-hours">
+                        <h3><i class="fas fa-clock"></i> Öffnungszeiten</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Montag - Freitag:</td>
+                                <td>11:30 - 14:30 & 17:30 - 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Samstag:</td>
+                                <td>17:30 - 23:30</td>
+                            </tr>
+                            <tr>
+                                <td>Sonntag:</td>
+                                <td>12:00 - 22:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Google Maps Integration</p>
+                        <p class="map-note">Hier würde die Google Maps Karte eingebunden werden</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Restaurant Bella Vista</h4>
+                    <p>Authentische italienische Küche seit 1985</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Schnelllinks</h4>
+                    <ul>
+                        <li><a href="#menu">Speisekarte</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#reservation">Reservierung</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Cookie-Richtlinie</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Bleiben Sie auf dem Laufenden über Events und Angebote</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ihre E-Mail" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restaurant Bella Vista. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Café Gemütlich - Ihr Ort für besten Kaffee, hausgemachte Kuchen und entspannte Atmosphäre">
+    <title>Café Gemütlich - Kaffee & Genuss in Musterstadt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">☕ Café Gemütlich</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#atmosphaere">Atmosphäre</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#speisen">Speisen & Getränke</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section id="home" class="hero">
+        <div class="slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(111, 78, 55, 0.3), rgba(111, 78, 55, 0.3)), url('data:image/svg+xml,%3Csvg width=\"1920\" height=\"1080\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Crect width=\"1920\" height=\"1080\" fill=\"%236F4E37\"/%3E%3Ctext x=\"50%25\" y=\"50%25\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\"%3EGemütliche Atmosphäre%3C/text%3E%3C/svg%3E');">
+                <div class="slide-content">
+                    <h1>Gemütlich. Modern. Laptop-Friendly.</h1>
+                    <p>Dein perfekter Ort zum Arbeiten & Entspannen</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(111, 78, 55, 0.3), rgba(111, 78, 55, 0.3)), url('data:image/svg+xml,%3Csvg width=\"1920\" height=\"1080\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Crect width=\"1920\" height=\"1080\" fill=\"%23C19A6B\"/%3E%3Ctext x=\"50%25\" y=\"50%25\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\"%3EFreies WLAN%3C/text%3E%3C/svg%3E');">
+                <div class="slide-content">
+                    <h1>Kostenloses Highspeed WLAN</h1>
+                    <p>Perfekt für Remote Work & Studium</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(111, 78, 55, 0.3), rgba(111, 78, 55, 0.3)), url('data:image/svg+xml,%3Csvg width=\"1920\" height=\"1080\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Crect width=\"1920\" height=\"1080\" fill=\"%238B7355\"/%3E%3Ctext x=\"50%25\" y=\"50%25\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\"%3EInstagram-Würdig%3C/text%3E%3C/svg%3E');">
+                <div class="slide-content">
+                    <h1>Instagram-Würdige Momente</h1>
+                    <p>Ästhetik trifft Kaffeekultur</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+
+        <div class="hero-badges">
+            <div class="badge">
+                <i class="fas fa-wifi"></i>
+                <span>Freies WLAN</span>
+            </div>
+            <div class="badge">
+                <i class="fas fa-laptop"></i>
+                <span>Laptop-Friendly</span>
+            </div>
+            <div class="badge">
+                <i class="fas fa-plug"></i>
+                <span>Steckdosen</span>
+            </div>
+            <div class="badge">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram-Spot</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours Widget -->
+    <section class="opening-hours-widget">
+        <div class="container">
+            <div class="hours-card">
+                <h2><i class="fas fa-clock"></i> Öffnungszeiten</h2>
+                <div class="hours-grid">
+                    <div class="hour-row">
+                        <span class="day">Montag - Freitag</span>
+                        <span class="time">07:00 - 20:00</span>
+                    </div>
+                    <div class="hour-row">
+                        <span class="day">Samstag</span>
+                        <span class="time">08:00 - 22:00</span>
+                    </div>
+                    <div class="hour-row">
+                        <span class="day">Sonntag</span>
+                        <span class="time">09:00 - 19:00</span>
+                    </div>
+                </div>
+                <div class="status open">
+                    <i class="fas fa-circle"></i>
+                    <span>Jetzt geöffnet</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atmosphere Section -->
+    <section id="atmosphaere" class="atmosphere">
+        <div class="container">
+            <h2 class="section-title">Warum Café Gemütlich?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">☕</div>
+                    <h3>Gemütliche Atmosphäre</h3>
+                    <p>Warme Beleuchtung, bequeme Sitzgelegenheiten und eine entspannte Atmosphäre – perfekt zum Verweilen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Arbeitsfreundlich</h3>
+                    <p>Große Tische, Steckdosen an jedem Platz und schnelles WLAN. Ideal für Remote Work und Studium.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Instagram-Würdig</h3>
+                    <p>Durchdachtes Design und schöne Details – dein perfekter Hintergrund für Social Media.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Angenehme Musik</h3>
+                    <p>Sorgfältig kuratierte Playlists schaffen die perfekte Arbeits- oder Entspannungsatmosphäre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Gallery -->
+    <section id="galerie" class="instagram-gallery">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fab fa-instagram"></i> Folge uns auf Instagram
+            </h2>
+            <p class="gallery-subtitle">@cafegemuetlich</p>
+            <div class="instagram-grid">
+                <div class="insta-item">
+                    <div class="insta-placeholder" style="background: linear-gradient(135deg, #C19A6B, #6F4E37);">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="insta-overlay">
+                        <i class="fas fa-heart"></i> 234
+                        <i class="fas fa-comment"></i> 12
+                    </div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-placeholder" style="background: linear-gradient(135deg, #8B7355, #C19A6B);">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="insta-overlay">
+                        <i class="fas fa-heart"></i> 189
+                        <i class="fas fa-comment"></i> 8
+                    </div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-placeholder" style="background: linear-gradient(135deg, #6F4E37, #8B7355);">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="insta-overlay">
+                        <i class="fas fa-heart"></i> 312
+                        <i class="fas fa-comment"></i> 15
+                    </div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-placeholder" style="background: linear-gradient(135deg, #C19A6B, #6F4E37);">
+                        <i class="fas fa-croissant"></i>
+                    </div>
+                    <div class="insta-overlay">
+                        <i class="fas fa-heart"></i> 267
+                        <i class="fas fa-comment"></i> 19
+                    </div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-placeholder" style="background: linear-gradient(135deg, #8B7355, #C19A6B);">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <div class="insta-overlay">
+                        <i class="fas fa-heart"></i> 198
+                        <i class="fas fa-comment"></i> 11
+                    </div>
+                </div>
+                <div class="insta-item">
+                    <div class="insta-placeholder" style="background: linear-gradient(135deg, #6F4E37, #8B7355);">
+                        <i class="fas fa-cake-candles"></i>
+                    </div>
+                    <div class="insta-overlay">
+                        <i class="fas fa-heart"></i> 445
+                        <i class="fas fa-comment"></i> 28
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="instagram-follow-btn">
+                <i class="fab fa-instagram"></i> Folgen @cafegemuetlich
+            </a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="speisen" class="menu">
+        <div class="container">
+            <h2 class="section-title">Speisen & Getränke</h2>
+            <div class="menu-categories">
+                <button class="menu-tab active" data-category="kaffee">Kaffee & Tee</button>
+                <button class="menu-tab" data-category="speisen">Speisen</button>
+                <button class="menu-tab" data-category="kuchen">Kuchen & Gebäck</button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-category active" id="kaffee">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Espresso</h3>
+                            <p>Klassischer italienischer Espresso</p>
+                        </div>
+                        <span class="price">2,50€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Cappuccino</h3>
+                            <p>Mit feinster Milchschaum-Kunst</p>
+                        </div>
+                        <span class="price">3,80€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Latte Macchiato</h3>
+                            <p>Cremiger Milchkaffee im Glas</p>
+                        </div>
+                        <span class="price">4,20€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Chai Latte</h3>
+                            <p>Würzig-süß mit Gewürzen</p>
+                        </div>
+                        <span class="price">4,50€</span>
+                    </div>
+                </div>
+                <div class="menu-category" id="speisen">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Avocado Toast</h3>
+                            <p>Mit Tomaten, Rucola & Balsamico</p>
+                        </div>
+                        <span class="price">7,90€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Bagel mit Lachs</h3>
+                            <p>Frischkäse, Räucherlachs, Kapern</p>
+                        </div>
+                        <span class="price">8,50€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Quiche des Tages</h3>
+                            <p>Mit Salat & Dressing</p>
+                        </div>
+                        <span class="price">9,90€</span>
+                    </div>
+                </div>
+                <div class="menu-category" id="kuchen">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Hausgemachter Käsekuchen</h3>
+                            <p>Cremig mit Beerensauce</p>
+                        </div>
+                        <span class="price">4,90€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Schoko-Brownie</h3>
+                            <p>Warm mit Vanilleeis</p>
+                        </div>
+                        <span class="price">5,50€</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Croissant</h3>
+                            <p>Butter oder Schoko</p>
+                        </div>
+                        <span class="price">2,80€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <h2 class="section-title">Besuche uns</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>Musterstraße 123<br>12345 Berlin</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>+49 30 12345678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-Mail</h3>
+                            <p>info@cafegemuetlich.de</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <h3>Schreib uns eine Nachricht</h3>
+                    <input type="text" name="name" placeholder="Dein Name" required>
+                    <input type="email" name="email" placeholder="Deine E-Mail" required>
+                    <textarea name="message" placeholder="Deine Nachricht" rows="5" required></textarea>
+                    <label class="privacy-checkbox">
+                        <input type="checkbox" name="privacy" required>
+                        <span>Ich habe die <a href="#">Datenschutzerklärung</a> gelesen und akzeptiere diese.*</span>
+                    </label>
+                    <button type="submit" class="submit-btn">Nachricht senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Café Gemütlich. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

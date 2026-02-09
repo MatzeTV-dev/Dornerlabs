@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salon Styles - Ihr moderner Friseursalon für trendige Haarschnitte und professionelle Haarpflege">
+    <title>Salon Styles - Moderner Friseursalon in Musterstadt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-cut"></i>
+                Salon Styles
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Leistungen</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#gallery" class="nav-link">Portfolio</a></li>
+                <li><a href="#kontakt" class="nav-link">Termin</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Willkommen bei Salon Styles</h1>
+            <p>Ihr Experte für moderne Frisuren und Haarpflege</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">Unsere Leistungen</a>
+                <a href="#kontakt" class="btn btn-secondary">Termin buchen</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-scissors"></i>
+                    <h3>Trendfrisuren</h3>
+                    <p>Moderne Schnitte und Styles</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-spa"></i>
+                    <h3>Haarpflege</h3>
+                    <p>Premium Behandlungen</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Coloration</h3>
+                    <p>Natürliche und kreative Farben</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-users"></i>
+                    <h3>Expertenteam</h3>
+                    <p>Erfahrene Stylisten</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unsere Leistungen</h2>
+                <p>Professionelle Haarpflege und Styling</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="damen">Damen</button>
+                <button class="tab-btn" data-tab="herren">Herren</button>
+                <button class="tab-btn" data-tab="behandlungen">Behandlungen</button>
+            </div>
+
+            <!-- Damen Tab -->
+            <div class="menu-content active" id="damen">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Waschen & Schneiden</h3>
+                            <span class="price">ab €45</span>
+                        </div>
+                        <p>Inkl. Kopfmassage und Styling</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Waschen & Föhnen</h3>
+                            <span class="price">ab €35</span>
+                        </div>
+                        <p>Professionelles Finish</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Strähnen</h3>
+                            <span class="price">ab €70</span>
+                        </div>
+                        <p>Highlights oder Lowlights</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Komplett-Coloration</h3>
+                            <span class="price">ab €85</span>
+                        </div>
+                        <p>Inkl. Pflege und Styling</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Balayage</h3>
+                            <span class="price">ab €120</span>
+                        </div>
+                        <p>Natürlicher Farbverlauf</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Hochsteckfrisur</h3>
+                            <span class="price">ab €65</span>
+                        </div>
+                        <p>Für besondere Anlässe</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Herren Tab -->
+            <div class="menu-content" id="herren">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Herrenschnitt</h3>
+                            <span class="price">€32</span>
+                        </div>
+                        <p>Waschen, Schneiden, Föhnen</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Bart trimmen</h3>
+                            <span class="price">€18</span>
+                        </div>
+                        <p>Professionelle Bartpflege</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Komplett-Service</h3>
+                            <span class="price">€45</span>
+                        </div>
+                        <p>Haare + Bart</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Maschinenfarbe</h3>
+                            <span class="price">€12</span>
+                        </div>
+                        <p>Nur Konturenschnitt</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Grauhaarabdeckung</h3>
+                            <span class="price">ab €40</span>
+                        </div>
+                        <p>Natürliches Ergebnis</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Haarstyling</h3>
+                            <span class="price">€25</span>
+                        </div>
+                        <p>Für Events und Anlässe</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Behandlungen Tab -->
+            <div class="menu-content" id="behandlungen">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Intensiv-Pflegekur</h3>
+                            <span class="price">€25</span>
+                        </div>
+                        <p>Tiefenpflege für geschädigtes Haar</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Keratinbehandlung</h3>
+                            <span class="price">ab €150</span>
+                        </div>
+                        <p>Glättet und stärkt das Haar</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Olaplex Behandlung</h3>
+                            <span class="price">ab €35</span>
+                        </div>
+                        <p>Repariert Haarschäden</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Dauerwelle</h3>
+                            <span class="price">ab €80</span>
+                        </div>
+                        <p>Natürliche Locken</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Extensions</h3>
+                            <span class="price">ab €300</span>
+                        </div>
+                        <p>Haarverlängerung/-verdichtung</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Kopfhautbehandlung</h3>
+                            <span class="price">€30</span>
+                        </div>
+                        <p>Pflege und Entspannung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unser Team</h2>
+                <p>Lernen Sie unsere Stylisten kennen</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Martinez</h3>
+                        <p class="member-role">Salonleitung & Master Stylist</p>
+                        <p class="member-bio">15 Jahre Erfahrung. Spezialisiert auf Schnitt & Coloration. Leidenschaft für kreative Frisuren und Typberatung.</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Balayage</span>
+                            <span class="specialty-tag">Hochsteckfrisuren</span>
+                            <span class="specialty-tag">Beratung</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Sarah Martinez')">Bei Sarah buchen</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Weber</h3>
+                        <p class="member-role">Senior Stylist</p>
+                        <p class="member-bio">10 Jahre Erfahrung. Experte für Herrenschnitte und Bartpflege. Moderne Looks mit klassischer Handwerkskunst.</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Herrenschnitte</span>
+                            <span class="specialty-tag">Bartpflege</span>
+                            <span class="specialty-tag">Fade Cuts</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Michael Weber')">Bei Michael buchen</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Lisa Hoffmann</h3>
+                        <p class="member-role">Color Specialist</p>
+                        <p class="member-bio">8 Jahre Erfahrung. Farbexpertin mit Auge fürs Detail. Von natürlich bis extravagant - alles ist möglich!</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Coloration</span>
+                            <span class="specialty-tag">Strähnen</span>
+                            <span class="specialty-tag">Ombré</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Lisa Hoffmann')">Bei Lisa buchen</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anna Schneider</h3>
+                        <p class="member-role">Stylist & Hair Care Expert</p>
+                        <p class="member-bio">6 Jahre Erfahrung. Spezialistin für Haarpflege-Behandlungen. Berät Sie gerne zu Produkten und Pflegeroutinen.</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Pflegebehandlungen</span>
+                            <span class="specialty-tag">Keratinbehandlung</span>
+                            <span class="specialty-tag">Extensions</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Anna Schneider')">Bei Anna buchen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-spa"></i>
+                        <p>Wohlfühlatmosphäre</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Über uns</h2>
+                    <p class="highlight">Ihr Friseursalon seit 2008</p>
+                    <p>Willkommen bei Salon Styles! In unserem modernen Friseursalon in Musterstadt vereinen wir langjährige Erfahrung mit den neuesten Trends der Friseurbranche. Unser Team aus qualifizierten Stylisten sorgt dafür, dass Sie sich bei uns rundum wohlfühlen.</p>
+                    <p>Wir legen großen Wert auf individuelle Beratung und arbeiten ausschließlich mit hochwertigen Produkten. Ob klassischer Haarschnitt, moderne Coloration oder spezielle Pflegebehandlung - bei uns sind Sie in besten Händen!</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium Produkte</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Erfahrenes Team</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Moderne Ausstattung</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Individuelle Beratung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Before/After) -->
+    <section id="gallery" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unser Portfolio</h2>
+                <p>Vorher & Nachher - Unsere Transformationen</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Balayage Transformation</h4>
+                        <p>Natürlicher Farbverlauf mit sonnigen Akzenten</p>
+                        <span class="stylist-credit">by Sarah Martinez</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Modern Fade Cut</h4>
+                        <p>Klassischer Herrenschnitt mit modernem Touch</p>
+                        <span class="stylist-credit">by Michael Weber</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Platinblonde Coloration</h4>
+                        <p>Von Dunkelbraun zu eisigem Platinblond</p>
+                        <span class="stylist-credit">by Lisa Hoffmann</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Bob mit Volumen</h4>
+                        <p>Gestuft geschnittener Bob für mehr Schwung</p>
+                        <span class="stylist-credit">by Sarah Martinez</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Keratinbehandlung</h4>
+                        <p>Glänzendes, geschmeidiges Haar nach Reparatur</p>
+                        <span class="stylist-credit">by Anna Schneider</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Rote Akzente</h4>
+                        <p>Warme Rottöne für einen lebendigen Look</p>
+                        <span class="stylist-credit">by Lisa Hoffmann</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Termin vereinbaren</h2>
+                <p>Wir freuen uns auf Ihren Besuch!</p>
+            </div>
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Online Terminbuchung</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Wunschdatum *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Wunschzeit *</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Leistung *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Bitte wählen</option>
+                                    <option value="damen">Damen</option>
+                                    <option value="herren">Herren</option>
+                                    <option value="farbe">Coloration</option>
+                                    <option value="pflege">Behandlung</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Anmerkungen</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Besondere Wünsche, bevorzugter Stylist, etc."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="privacy" required>
+                                <span>Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> zur Kenntnis genommen und stimme der Verarbeitung meiner Daten zur Terminvereinbarung zu.*</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Termin anfragen</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3><i class="fas fa-map-marker-alt"></i> Adresse</h3>
+                        <p>Schönheitsstraße 15<br>1234 Musterstadt<br>Österreich</p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-phone"></i> Telefon</h3>
+                        <p><a href="tel:+43123456788">+43 123 456 788</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-envelope"></i> E-Mail</h3>
+                        <p><a href="mailto:info@salon-styles.at">info@salon-styles.at</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-clock"></i> Öffnungszeiten</h3>
+                        <table class="opening-hours">
+                            <tr>
+                                <td>Montag:</td>
+                                <td>Ruhetag</td>
+                            </tr>
+                            <tr>
+                                <td>Dienstag - Freitag:</td>
+                                <td>09:00 - 19:00</td>
+                            </tr>
+                            <tr>
+                                <td>Samstag:</td>
+                                <td>08:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Sonntag:</td>
+                                <td>Geschlossen</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Google Maps Integration</p>
+                    <small>Schönheitsstraße 15, 1234 Musterstadt</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Salon Styles</h4>
+                    <p>Ihr Experte für moderne Frisuren und Haarpflege</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Schönheitsstraße 15<br>1234 Musterstadt</p>
+                    <p>Tel: +43 123 456 788</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Öffnungszeiten</h4>
+                    <p>Di-Fr: 09:00 - 19:00<br>Sa: 08:00 - 16:00<br>Mo + So: Geschlossen</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Salon Styles. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="#impressum">Impressum</a>
+                    <a href="#datenschutz">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

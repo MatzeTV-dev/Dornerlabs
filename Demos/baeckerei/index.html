@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bäckerei Frischbrot - Täglich frische Backwaren aus traditioneller Handwerksbäckerei">
+    <title>Bäckerei Frischbrot - Handwerksbäckerei in Musterstadt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bread-slice"></i>
+                Bäckerei Frischbrot
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#produkte" class="nav-link">Produkte</a></li>
+                <li><a href="#catering" class="nav-link">Catering</a></li>
+                <li><a href="#about" class="nav-link">Über uns</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Bäckerei Frischbrot</h1>
+            <p>Traditionelles Handwerk - Täglich frisch gebacken</p>
+            <div class="hero-buttons">
+                <a href="#produkte" class="btn btn-primary">Unser Sortiment</a>
+                <a href="#kontakt" class="btn btn-secondary">Bestellung aufgeben</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Baking Times Widget -->
+    <section class="baking-times-widget">
+        <div class="container">
+            <div class="times-card">
+                <h2><i class="fas fa-fire"></i> Frisch aus dem Ofen</h2>
+                <p class="subtitle">Unsere heutigen Backzeiten</p>
+                <div class="times-grid">
+                    <div class="time-slot">
+                        <div class="time">07:00 Uhr</div>
+                        <div class="items">Semmeln, Brot, Croissants</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">10:30 Uhr</div>
+                        <div class="items">Vollkornbrot, Feingebäck</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">14:00 Uhr</div>
+                        <div class="items">Nachmittagsgebäck, Kuchen</div>
+                    </div>
+                </div>
+                <div class="fresh-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Jetzt frisch verfügbar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-bread-slice"></i>
+                    <h3>Frische Backwaren</h3>
+                    <p>Täglich mehrmals frisch gebacken</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Handwerkstradition</h3>
+                    <p>Meisterliches Bäckerhandwerk</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Regionale Zutaten</h3>
+                    <p>Beste Qualität aus der Region</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-clock"></i>
+                    <h3>Früh geöffnet</h3>
+                    <p>Ab 6 Uhr für Sie da</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produkte" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unser Sortiment</h2>
+                <p>Frisch aus dem Ofen für Sie</p>
+                <div class="allergen-legend">
+                    <span class="legend-title">Allergene:</span>
+                    <span class="allergen-icon" title="Enthält Gluten"><i class="fas fa-wheat-awn"></i> Gluten</span>
+                    <span class="allergen-icon" title="Enthält Milch"><i class="fas fa-droplet"></i> Milch</span>
+                    <span class="allergen-icon" title="Enthält Eier"><i class="fas fa-egg"></i> Eier</span>
+                    <span class="allergen-icon" title="Enthält Nüsse"><i class="fas fa-leaf"></i> Nüsse</span>
+                </div>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="brot">Brot & Brötchen</button>
+                <button class="tab-btn" data-tab="kuchen">Kuchen & Torten</button>
+                <button class="tab-btn" data-tab="gebaeck">Feingebäck</button>
+            </div>
+
+            <!-- Brot Tab -->
+            <div class="menu-content active" id="brot">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Bauernbrot</h3>
+                            <span class="price">€4.20</span>
+                        </div>
+                        <p>Kräftiges Roggenmischbrot, 1kg</p>
+                        <div class="allergens">
+                            <i class="fas fa-wheat-awn" title="Enthält Gluten"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Vollkornbrot</h3>
+                            <span class="price">€4.80</span>
+                        </div>
+                        <p>Mit ganzen Körnern, 1kg</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Weizenmischbrot</h3>
+                            <span class="price">€3.90</span>
+                        </div>
+                        <p>Mild und luftig, 750g</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Ciabatta</h3>
+                            <span class="price">€3.20</span>
+                        </div>
+                        <p>Italienisches Weißbrot</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Semmeln</h3>
+                            <span class="price">€0.55</span>
+                        </div>
+                        <p>Knusprige Weizenbrötchen</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Kornspitz</h3>
+                            <span class="price">€0.85</span>
+                        </div>
+                        <p>Mit Kürbiskernen</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kuchen Tab -->
+            <div class="menu-content" id="kuchen">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Sachertorte</h3>
+                            <span class="price">€28.00</span>
+                        </div>
+                        <p>Klassisch österreichisch, ganze Torte</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Apfelstrudel</h3>
+                            <span class="price">€3.80</span>
+                        </div>
+                        <p>Nach Großmutters Rezept, Stück</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Gugelhupf</h3>
+                            <span class="price">€12.50</span>
+                        </div>
+                        <p>Traditioneller Marmorgugelhupf</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Linzer Torte</h3>
+                            <span class="price">€24.00</span>
+                        </div>
+                        <p>Mit Ribiselmarmelade, ganze Torte</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Bienenstich</h3>
+                            <span class="price">€3.50</span>
+                        </div>
+                        <p>Mit Vanillecreme, Stück</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Obsttorte</h3>
+                            <span class="price">€26.00</span>
+                        </div>
+                        <p>Saisonal nach Verfügbarkeit</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gebäck Tab -->
+            <div class="menu-content" id="gebaeck">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Croissant</h3>
+                            <span class="price">€1.80</span>
+                        </div>
+                        <p>Buttercroissant nach französischer Art</p>
+                        <div class="allergens">
+                            <i class="fas fa-wheat-awn" title="Enthält Gluten"></i>
+                            <i class="fas fa-droplet" title="Enthält Milch"></i>
+                            <i class="fas fa-egg" title="Enthält Eier"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Topfengolatsche</h3>
+                            <span class="price">€2.20</span>
+                        </div>
+                        <p>Mit cremiger Topfenfüllung</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Nussschnecke</h3>
+                            <span class="price">€2.40</span>
+                        </div>
+                        <p>Mit Walnussfüllung</p>
+                        <div class="allergens">
+                            <i class="fas fa-wheat-awn" title="Enthält Gluten"></i>
+                            <i class="fas fa-droplet" title="Enthält Milch"></i>
+                            <i class="fas fa-egg" title="Enthält Eier"></i>
+                            <i class="fas fa-leaf" title="Enthält Nüsse"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Zimtschnecke</h3>
+                            <span class="price">€2.50</span>
+                        </div>
+                        <p>Skandinavisch inspiriert</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Butterplunder</h3>
+                            <span class="price">€1.90</span>
+                        </div>
+                        <p>Klassisches Blätterteiggebäck</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Schokobrötchen</h3>
+                            <span class="price">€2.00</span>
+                        </div>
+                        <p>Mit Schokoladenstückchen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Section -->
+    <section id="catering" class="catering">
+        <div class="container">
+            <div class="section-header">
+                <h2>Catering & Partyservice</h2>
+                <p>Für Ihre Feierlichkeiten und Events</p>
+            </div>
+            <div class="catering-content">
+                <div class="catering-text">
+                    <h3>Lassen Sie sich verwöhnen</h3>
+                    <p>Ob Firmenfeier, Geburtstag, Hochzeit oder Taufe - mit unserem Catering-Service sorgen wir dafür, dass Ihre Gäste kulinarisch verwöhnt werden. Wir liefern frische Backwaren, belegte Brötchen, Kuchen und Torten direkt zu Ihrem Event.</p>
+
+                    <div class="catering-packages">
+                        <div class="package-card">
+                            <h4><i class="fas fa-briefcase"></i> Business-Paket</h4>
+                            <p>Perfekt für Meetings und Konferenzen</p>
+                            <ul>
+                                <li>Belegte Brötchen-Platte</li>
+                                <li>Croissants & Gebäck</li>
+                                <li>Kaffeekuchen</li>
+                            </ul>
+                            <span class="package-price">ab €8,50 pro Person</span>
+                        </div>
+                        <div class="package-card">
+                            <h4><i class="fas fa-birthday-cake"></i> Party-Paket</h4>
+                            <p>Für private Feiern und Events</p>
+                            <ul>
+                                <li>Snack-Platte mit Gebäck</li>
+                                <li>Torten nach Wahl</li>
+                                <li>Fingerfood-Auswahl</li>
+                            </ul>
+                            <span class="package-price">ab €12,00 pro Person</span>
+                        </div>
+                        <div class="package-card">
+                            <h4><i class="fas fa-utensils"></i> Brunch-Paket</h4>
+                            <p>Für Sonntagsbrunch und Frühstück</p>
+                            <ul>
+                                <li>Diverse Brotsorten</li>
+                                <li>Süße & herzhafte Brötchen</li>
+                                <li>Kuchen & Gebäck</li>
+                            </ul>
+                            <span class="package-price">ab €15,00 pro Person</span>
+                        </div>
+                    </div>
+
+                    <div class="catering-cta">
+                        <p><strong>Mindestbestellmenge:</strong> 10 Personen | <strong>Vorlaufzeit:</strong> 48 Stunden</p>
+                        <a href="#kontakt" class="btn btn-primary">Catering anfragen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-cookie-bite"></i>
+                        <p>Handwerkskunst</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Über uns</h2>
+                    <p class="highlight">Bäckertradition seit 1982</p>
+                    <p>Willkommen bei der Bäckerei Frischbrot! Seit über 40 Jahren backen wir mit Liebe und Hingabe täglich frische Backwaren für Sie. Unsere Meisterbäcker verwenden traditionelle Rezepte und beste regionale Zutaten, um Ihnen Brot, Gebäck und Kuchen von höchster Qualität zu bieten.</p>
+                    <p>In unserer Backstube wird noch echtes Handwerk gelebt. Jedes Brot wird von Hand geformt, jedes Gebäck mit Sorgfalt gefertigt. Besuchen Sie uns und erleben Sie den Duft von frisch gebackenem Brot!</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Meisterbetrieb</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Regionale Zutaten</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Täglich frisch</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bio-Auswahl</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Impressionen</h2>
+                <p>Ein Blick in unsere Bäckerei</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kontakt & Bestellung</h2>
+                <p>Wir freuen uns auf Ihren Besuch!</p>
+            </div>
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Vorbestellung aufgeben</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Abholdatum *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Abholzeit *</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Kategorie</label>
+                                <select id="category" name="category">
+                                    <option value="">Bitte wählen</option>
+                                    <option value="brot">Brot & Brötchen</option>
+                                    <option value="kuchen">Kuchen & Torten</option>
+                                    <option value="gebaeck">Feingebäck</option>
+                                    <option value="party">Partyservice</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Ihre Bestellung *</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Bitte geben Sie hier Ihre Bestellung an..." required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="privacy" required>
+                                <span>Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> zur Kenntnis genommen und stimme der Verarbeitung meiner Daten zur Bearbeitung der Bestellung zu.*</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Bestellung absenden</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3><i class="fas fa-map-marker-alt"></i> Adresse</h3>
+                        <p>Brotstraße 22<br>1234 Musterstadt<br>Österreich</p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-phone"></i> Telefon</h3>
+                        <p><a href="tel:+43123456787">+43 123 456 787</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-envelope"></i> E-Mail</h3>
+                        <p><a href="mailto:info@frischbrot.at">info@frischbrot.at</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-clock"></i> Öffnungszeiten</h3>
+                        <table class="opening-hours">
+                            <tr>
+                                <td>Montag - Freitag:</td>
+                                <td>06:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>Samstag:</td>
+                                <td>06:00 - 13:00</td>
+                            </tr>
+                            <tr>
+                                <td>Sonntag:</td>
+                                <td>07:00 - 11:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Google Maps Integration</p>
+                    <small>Brotstraße 22, 1234 Musterstadt</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bäckerei Frischbrot</h4>
+                    <p>Traditionelles Bäckerhandwerk seit 1982</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Brotstraße 22<br>1234 Musterstadt</p>
+                    <p>Tel: +43 123 456 787</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Öffnungszeiten</h4>
+                    <p>Mo-Fr: 06:00 - 18:00<br>Sa: 06:00 - 13:00<br>So: 07:00 - 11:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bäckerei Frischbrot. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="#impressum">Impressum</a>
+                    <a href="#datenschutz">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

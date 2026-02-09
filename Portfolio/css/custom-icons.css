@@ -1,0 +1,35 @@
+/* Custom Icons - Only the icons we actually use */
+/* This replaces Font Awesome and Devicon CDN imports (~36KB savings) */
+
+/* Base icon styles */
+.fab, .fas {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font Awesome Brand Icons - Using Unicode from Font Awesome */
+.fab.fa-react::before { content: "\f41b"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-node::before { content: "\f419"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-python::before { content: "\f3e2"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-html5::before { content: "\f13b"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-css3-alt::before { content: "\f38b"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-js::before { content: "\f3b8"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-git-alt::before { content: "\f841"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-github::before { content: "\f09b"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-linkedin::before { content: "\f08c"; font-family: "Font Awesome 6 Brands"; }
+.fab.fa-instagram::before { content: "\f16d"; font-family: "Font Awesome 6 Brands"; }
+
+/* Font Awesome Solid Icons */
+.fas.fa-brain::before { content: "\f5dc"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.fas.fa-database::before { content: "\f1c0"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.fas.fa-external-link-alt::before { content: "\f35d"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.fas.fa-check::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.fas.fa-envelope::before { content: "\f0e0"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+
+/* Devicon Icons - Loaded from CDN for C, C++, C# */
+/* The devicon.min.css provides the correct Unicode mappings */

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Autohaus Müller - Ihr Partner für Neu- und Gebrauchtwagen sowie professionellen Service">
+    <title>Autohaus Müller - Fahrzeughandel & Service in Musterstadt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                Autohaus Müller
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#fahrzeuge" class="nav-link">Fahrzeuge</a></li>
+                <li><a href="#service" class="nav-link">Service</a></li>
+                <li><a href="#about" class="nav-link">Über uns</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Autohaus Müller</h1>
+            <p>Ihr vertrauensvoller Partner für Mobilität</p>
+            <div class="hero-buttons">
+                <a href="#fahrzeuge" class="btn btn-primary">Fahrzeuge entdecken</a>
+                <a href="#kontakt" class="btn btn-secondary">Probefahrt vereinbaren</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-car"></i>
+                    <h3>Große Auswahl</h3>
+                    <p>Neu- und Gebrauchtwagen</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-tools"></i>
+                    <h3>Meisterwerkstatt</h3>
+                    <p>Professioneller Service</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Garantie</h3>
+                    <p>Geprüfte Qualität</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Beratung</h3>
+                    <p>Individuelle Lösungen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fahrzeuge Section -->
+    <section id="fahrzeuge" class="vehicles">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unser Fahrzeugangebot</h2>
+                <p>Finden Sie Ihr Traumauto</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="neuwagen">Neuwagen</button>
+                <button class="tab-btn" data-tab="gebraucht">Gebrauchtwagen</button>
+                <button class="tab-btn" data-tab="leasing">Leasing</button>
+            </div>
+
+            <!-- Neuwagen Tab -->
+            <div class="menu-content active" id="neuwagen">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Kompaktklasse</h3>
+                            <span class="price">ab €24.990</span>
+                        </div>
+                        <p>Moderne Stadtautos mit effizienten Motoren</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Mittelklasse</h3>
+                            <span class="price">ab €32.990</span>
+                        </div>
+                        <p>Komfort und Leistung vereint</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>SUV</h3>
+                            <span class="price">ab €38.990</span>
+                        </div>
+                        <p>Geländetauglich und geräumig</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Elektrofahrzeuge</h3>
+                            <span class="price">ab €35.990</span>
+                        </div>
+                        <p>Emissionsfrei in die Zukunft</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Hybrid</h3>
+                            <span class="price">ab €29.990</span>
+                        </div>
+                        <p>Das Beste aus zwei Welten</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Sportwagen</h3>
+                            <span class="price">ab €54.990</span>
+                        </div>
+                        <p>Performance und Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gebrauchtwagen Tab -->
+            <div class="menu-content" id="gebraucht">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Jahreswagen</h3>
+                            <span class="price">ab €18.990</span>
+                        </div>
+                        <p>Neuwertig mit Werksgarantie</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Geprüfte Gebrauchte</h3>
+                            <span class="price">ab €12.990</span>
+                        </div>
+                        <p>Mit Garantie und Wartungspaket</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Vorführwagen</h3>
+                            <span class="price">ab €22.990</span>
+                        </div>
+                        <p>Wenig Kilometer, volle Ausstattung</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Familienautos</h3>
+                            <span class="price">ab €15.990</span>
+                        </div>
+                        <p>Geräumig und zuverlässig</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Kleinwagen</h3>
+                            <span class="price">ab €8.990</span>
+                        </div>
+                        <p>Perfekt für die Stadt</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Transporter</h3>
+                            <span class="price">ab €19.990</span>
+                        </div>
+                        <p>Für Gewerbe und Handwerk</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leasing Tab -->
+            <div class="menu-content" id="leasing">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Privatleasing</h3>
+                            <span class="price">ab €199/Mon.</span>
+                        </div>
+                        <p>Flexibel ohne Anzahlung</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Geschäftsleasing</h3>
+                            <span class="price">ab €249/Mon.</span>
+                        </div>
+                        <p>Steuerliche Vorteile nutzen</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Full-Service-Leasing</h3>
+                            <span class="price">ab €299/Mon.</span>
+                        </div>
+                        <p>Rundumpaket mit allen Services</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Restwertleasing</h3>
+                            <span class="price">ab €179/Mon.</span>
+                        </div>
+                        <p>Niedrige monatliche Raten</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>Kilometerleasing</h3>
+                            <span class="price">ab €219/Mon.</span>
+                        </div>
+                        <p>Flexible Kilometer-Pakete</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h3>E-Auto Leasing</h3>
+                            <span class="price">ab €289/Mon.</span>
+                        </div>
+                        <p>Inkl. Förderung und Ladepaket</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unsere Services</h2>
+                <p>Rundum-Service für Ihr Fahrzeug</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Inspektion & Wartung</h3>
+                    <p>Regelmäßige Checks nach Herstellervorgaben</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-oil-can"></i>
+                    <h3>Ölwechsel</h3>
+                    <p>Schnell und professionell</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-car-crash"></i>
+                    <h3>Unfallreparatur</h3>
+                    <p>Karosserie- und Lackierarbeiten</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tire"></i>
+                    <h3>Reifenservice</h3>
+                    <p>Verkauf, Montage und Lagerung</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Reparaturen</h3>
+                    <p>Alle Marken und Modelle</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Hauptuntersuchung</h3>
+                    <p>§57a Begutachtung vor Ort</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-car-side"></i>
+                        <p>Moderne Ausstattung</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Über uns</h2>
+                    <p class="highlight">Ihr Autohaus seit 1975</p>
+                    <p>Das Autohaus Müller ist seit fast 50 Jahren Ihr verlässlicher Partner in allen Fragen rund ums Auto. Als familiengeführtes Unternehmen legen wir größten Wert auf persönliche Beratung, faire Preise und erstklassigen Service.</p>
+                    <p>Unser Team aus erfahrenen Mechanikern und Verkaufsberatern steht Ihnen mit Rat und Tat zur Seite - vom Fahrzeugkauf über Finanzierung und Versicherung bis hin zu Wartung und Reparatur. Vertrauen Sie auf unsere Kompetenz und Erfahrung!</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Vertragshändler</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Meisterwerkstatt</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24h-Notdienst</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ersatzfahrzeuge</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Impressionen</h2>
+                <p>Einblicke in unser Autohaus</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-car"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kontakt & Anfrage</h2>
+                <p>Wir freuen uns auf Ihre Nachricht!</p>
+            </div>
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Anfrage senden</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="interest">Interesse an *</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">Bitte wählen</option>
+                                    <option value="neuwagen">Neuwagen</option>
+                                    <option value="gebraucht">Gebrauchtwagen</option>
+                                    <option value="leasing">Leasing</option>
+                                    <option value="service">Service/Werkstatt</option>
+                                    <option value="ankauf">Fahrzeugankauf</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Wunschtermin</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Uhrzeit</label>
+                                <input type="time" id="time" name="time">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Ihre Nachricht *</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Beschreiben Sie uns Ihr Anliegen..." required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="privacy" required>
+                                <span>Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> zur Kenntnis genommen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. Meine Daten werden nicht an Dritte weitergegeben.*</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Anfrage absenden</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3><i class="fas fa-map-marker-alt"></i> Adresse</h3>
+                        <p>Autostraße 99<br>1234 Musterstadt<br>Österreich</p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-phone"></i> Telefon</h3>
+                        <p>Verkauf: <a href="tel:+43123456785">+43 123 456 785</a><br>
+                        Werkstatt: <a href="tel:+43123456786">+43 123 456 786</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-envelope"></i> E-Mail</h3>
+                        <p><a href="mailto:info@autohaus-mueller.at">info@autohaus-mueller.at</a></p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-clock"></i> Öffnungszeiten</h3>
+                        <table class="opening-hours">
+                            <tr>
+                                <td><strong>Verkauf:</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Mo-Fr:</td>
+                                <td>08:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>Sa:</td>
+                                <td>09:00 - 13:00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Werkstatt:</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Mo-Fr:</td>
+                                <td>07:00 - 17:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Google Maps Integration</p>
+                    <small>Autostraße 99, 1234 Musterstadt</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Autohaus Müller</h4>
+                    <p>Ihr vertrauensvoller Partner für Mobilität seit 1975</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Autostraße 99<br>1234 Musterstadt</p>
+                    <p>Tel: +43 123 456 785</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Öffnungszeiten</h4>
+                    <p>Verkauf Mo-Fr: 08:00 - 18:00<br>Sa: 09:00 - 13:00<br>Werkstatt Mo-Fr: 07:00 - 17:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Autohaus Müller. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="#impressum">Impressum</a>
+                    <a href="#datenschutz">Datenschutz</a>
+                    <a href="#agb">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
