@@ -1,46 +1,24 @@
 # ===== Dornerlabs Main Site - Apache Configuration =====
-
-# Force HTTPS (disabled for local development)
-# Uncomment when deploying to production
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTPS} off
-#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# </IfModule>
+# Simplified for local development
 
 # ===== GZIP Compression =====
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml application/xml application/xhtml+xml application/rss+xml
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-# ===== Enhanced Security Headers =====
+# ===== Basic Security Headers =====
 <IfModule mod_headers.c>
-  # Content Security Policy (CSP) - Allows subdomains
-  Header set Content-Security-Policy "default-src 'self' https://*.dornerlabs.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://kit.fontawesome.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://kit.fontawesome.com; img-src 'self' data: https: https://*.dornerlabs.com; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;"
-
-  # Prevent clickjacking attacks
+  # Prevent clickjacking
   Header set X-Frame-Options "SAMEORIGIN"
 
   # Prevent MIME-type sniffing
   Header set X-Content-Type-Options "nosniff"
 
-  # XSS Protection (legacy header, but still useful for older browsers)
+  # XSS Protection
   Header set X-XSS-Protection "1; mode=block"
 
-  # Referrer Policy - Control referrer information
+  # Referrer Policy
   Header set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # Permissions Policy (formerly Feature Policy)
-  Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
-
-  # Require HTTPS only (HSTS)
-  # Note: Only enable this after confirming HTTPS works correctly
-  # Uncomment the following line when ready:
-  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-
-  # Remove server signature
-  Header unset Server
-  Header unset X-Powered-By
 </IfModule>
 
 # ===== Browser Caching =====
@@ -55,17 +33,8 @@
   # Images
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
-
-  # Fonts
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType font/woff "access plus 1 year"
-  ExpiresByType font/ttf "access plus 1 year"
-  ExpiresByType application/font-woff2 "access plus 1 year"
 
   # HTML - Always fetch fresh
   ExpiresByType text/html "access plus 0 seconds"
@@ -73,71 +42,21 @@
 
 # ===== Cache Control Headers =====
 <IfModule mod_headers.c>
-  # Cache CSS and JS for 1 month
+  # Cache CSS and JS
   <FilesMatch "\.(css|js)$">
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
 
-  # Cache images for 1 year
+  # Cache images
   <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
-    Header set Cache-Control "public, max-age=31536000"
-  </FilesMatch>
-
-  # Cache fonts for 1 year
-  <FilesMatch "\.(woff2|woff|ttf|eot)$">
     Header set Cache-Control "public, max-age=31536000"
   </FilesMatch>
 
   # Don't cache HTML
   <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
   </FilesMatch>
 </IfModule>
-
-# ===== Rate Limiting with mod_evasive =====
-# Note: This requires mod_evasive to be installed and enabled
-# If you don't have mod_evasive, consider using Cloudflare instead
-<IfModule mod_evasive20.c>
-  # Requests per second for an individual page
-  DOSPageCount 10
-
-  # Total requests per second for entire site
-  DOSSiteCount 100
-
-  # Lockout period in seconds (10 minutes)
-  DOSBlockingPeriod 600
-
-  # Email notification (optional - add your email)
-  # DOSEmailNotify admin@dornerlabs.com
-
-  # Log directory (ensure this directory exists and is writable)
-  # DOSLogDir "/var/log/apache2/evasive"
-
-  # Whitelist trusted IPs (development/monitoring)
-  DOSWhitelist 127.0.0.1
-  DOSWhitelist 192.168.1.0/24
-</IfModule>
-
-# ===== File Protection =====
-# Prevent access to sensitive files
-<FilesMatch "^\.">
-  Order allow,deny
-  Deny from all
-</FilesMatch>
-
-# Protect .htaccess itself
-<Files .htaccess>
-  Order allow,deny
-  Deny from all
-</Files>
-
-# Protect other sensitive files
-<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp)|~)$">
-  Order allow,deny
-  Deny from all
-</FilesMatch>
 
 # ===== Disable Directory Browsing =====
 Options -Indexes
@@ -145,20 +64,9 @@ Options -Indexes
 # ===== Default Charset =====
 AddDefaultCharset UTF-8
 
-# ===== Error Pages (optional) =====
-# Uncomment and customize as needed
-# ErrorDocument 404 /404.html
-# ErrorDocument 500 /500.html
-
-# ===== Additional Performance Optimizations =====
-# Enable Keep-Alive
-<IfModule mod_headers.c>
-  Header set Connection keep-alive
+# ===== MIME Types =====
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js
+  AddType image/webp .webp
 </IfModule>
-
-# ===== Notes =====
-# 1. Test thoroughly after enabling HSTS header - it forces HTTPS permanently
-# 2. Adjust CSP directives based on your actual CDN usage
-# 3. Consider using Cloudflare for additional DDoS protection and rate limiting
-# 4. Monitor logs for mod_evasive blocks: /var/log/apache2/evasive
-# 5. If mod_evasive is not available, the directives will be safely ignored
