@@ -3,285 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Matthias Dorner - Software Developer mit Fokus auf moderne Business-Anwendungen, AI-Entwicklung und Clean Code. Portfolio mit Projekten und Berufserfahrung.">
-    <title>Matthias Dorner - Software Developer & AI Entwickler</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Matthias Dorner - Software Developer aus Österreich. Spezialisiert auf Full-Stack Development, AI-Integration, React Native & Node.js. 4+ Jahre Erfahrung in modernen Business-Anwendungen.">
+    <meta name="keywords" content="Matthias Dorner, Software Developer, Full Stack Developer, AI Developer, React Native, Node.js, Python, Web Development, Österreich, ClubMatch, Portfolio">
+    <meta name="author" content="Matthias Dorner">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://portfolio.dornerlabs.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio.dornerlabs.com">
+    <meta property="og:title" content="Matthias Dorner - Software Developer & AI Specialist">
+    <meta property="og:description" content="Full-Stack Developer aus Österreich mit Fokus auf AI-Integration und moderne Business-Anwendungen. Founder von ClubMatch.">
+    <meta property="og:image" content="https://portfolio.dornerlabs.com/assets/Pic.webp">
+    <meta property="og:locale" content="de_AT">
+    <meta property="og:site_name" content="Matthias Dorner Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://portfolio.dornerlabs.com">
+    <meta name="twitter:title" content="Matthias Dorner - Software Developer & AI Specialist">
+    <meta name="twitter:description" content="Full-Stack Developer aus Österreich mit Fokus auf AI-Integration und moderne Business-Anwendungen.">
+    <meta name="twitter:image" content="https://portfolio.dornerlabs.com/assets/Pic.webp">
+
+    <title>Matthias Dorner - Software Developer & AI Entwickler | Portfolio</title>
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="assets/icon/dornerlabs-icon-dark.ico">
     <link rel="shortcut icon" type="image/x-icon" href="assets/icon/dornerlabs-icon-dark.ico">
 
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Preload critical assets -->
-    <link rel="preload" href="assets/Pic.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/pic.webp" as="image" type="image/png">
 
-    <!-- Preload fonts for better performance -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Critical CSS - Inlined for faster initial render -->
+    <!-- Critical CSS -->
     <style>
-        /* Reset & Base */
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--primary-color:#00ff88;--secondary-color:#0099ff;--accent-color:#ff0080;--bg-dark:#0a0e27;--bg-darker:#050810;--bg-card:#141b33;--text-primary:#e4f0fb;--text-secondary:#8892b0}
-        html{scroll-behavior:smooth}
-        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg-darker);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
-        body.menu-open{overflow:hidden}
-        .container{max-width:1200px;margin:0 auto;padding:0 20px}
-        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
-        /* Navigation */
-        .navbar{position:fixed;top:0;width:100%;background:rgba(10,14,39,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;border-bottom:1px solid rgba(0,255,136,0.1);transition:all 0.3s ease}
-        .navbar.scrolled{box-shadow:0 5px 30px rgba(0,255,136,0.1)}
-        .nav-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-        .logo{font-size:1.5rem;font-weight:bold;color:var(--primary-color);font-family:monospace}
-        .nav-menu{display:flex;list-style:none;gap:2rem}
-        .nav-link{color:var(--text-primary);text-decoration:none;transition:color 0.3s ease;position:relative;padding:0.5rem 0}
-        .nav-link:hover,.nav-link:focus{color:var(--primary-color)}
-        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1001}
-        .hamburger span{width:25px;height:3px;background:var(--primary-color);border-radius:3px;transition:all 0.3s ease}
-        /* About Section - Above the fold */
-        section{padding:5rem 0}
-        .section-title{text-align:center;font-size:2.5rem;margin-bottom:3rem;position:relative}
-        .code-bracket{color:var(--primary-color);font-family:monospace;font-weight:bold}
-        .about{padding-top:7rem}
-        .about-content{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-        .about-image{position:relative}
-        .image-frame{position:relative;width:100%;max-width:400px;margin:0 auto}
-        .image-frame img{width:100%;height:auto;border-radius:10px;position:relative;z-index:1}
+        :root{
+            --electric:#d0ff00;
+            --black:#0a0a0a;
+            --dark-gray:#1a1a1a;
+            --mid-gray:#2a2a2a;
+            --light-gray:#888;
+            --white:#fafafa;
+        }
+        body{
+            font-family:'IBM Plex Mono',monospace;
+            background:var(--black);
+            color:var(--white);
+            overflow-x:hidden;
+            line-height:1.6;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family:'Clash Display',sans-serif;
+            font-weight:700;
+            line-height:1.1;
+        }
     </style>
 
-    <!-- Non-critical CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/custom-icons.css">
 
-    <!-- Devicon for C, C++, C# icons only -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Structured Data (JSON-LD) for GEO & SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Matthias Dorner",
+      "url": "https://portfolio.dornerlabs.com",
+      "image": "https://portfolio.dornerlabs.com/assets/Pic.webp",
+      "jobTitle": "Software Developer & AI Specialist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "ClubMatch"
+      },
+      "description": "Full-Stack Software Developer aus Österreich mit 4+ Jahren Erfahrung. Spezialisiert auf moderne Business-Anwendungen, AI-Integration und Clean Code.",
+      "knowsAbout": [
+        "Software Development",
+        "Full Stack Development",
+        "AI Development",
+        "React Native",
+        "Node.js",
+        "Python",
+        "JavaScript",
+        "Web Development",
+        "Mobile Development"
+      ],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "KNAPP AG"
+      },
+      "email": "matthias@dornerlabs.com",
+      "sameAs": [
+        "https://github.com/MatzeTV-dev",
+        "https://www.linkedin.com/in/matthias-dorner-70714629b/",
+        "https://www.instagram.com/_matthias_l_/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AT"
+      }
+    }
+    </script>
 
-    <!-- Font Display Optimization -->
-    <style>
-        /* Ensure text is visible during font loading - override CDN defaults */
-        @font-face {
-            font-family: 'Font Awesome 6 Free';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2') format('woff2');
-        }
-        @font-face {
-            font-family: 'Font Awesome 6 Brands';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2') format('woff2');
-        }
-        @font-face {
-            font-family: 'devicon';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.woff2') format('woff2'),
-                 url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf') format('truetype');
-        }
-    </style>
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://portfolio.dornerlabs.com"
+      }]
+    }
+    </script>
 
+    <!-- WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Matthias Dorner Portfolio",
+      "url": "https://portfolio.dornerlabs.com",
+      "description": "Portfolio von Matthias Dorner - Software Developer & AI Specialist",
+      "author": {
+        "@type": "Person",
+        "name": "Matthias Dorner"
+      }
+    }
+    </script>
 </head>
 <body>
-    <!-- SEO H1 - visually hidden but accessible to search engines and screen readers -->
+    <!-- SEO H1 -->
     <h1 class="sr-only">Matthias Dorner - Software Developer & AI Entwickler Portfolio</h1>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">&lt;DL&gt;</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">über mich</a></li>
-                <li><a href="#tech" class="nav-link">Tech Stack</a></li>
-                <li><a href="#experience" class="nav-link">Berufserfahrung</a></li>
-                <li><a href="#projects" class="nav-link">Projekte</a></li>
-                <li><a href="#showcase" class="nav-link">Showcase</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#hero" class="nav__logo">DORNERLABS</a>
+            <div class="nav__menu" id="navMenu">
+                <a href="#about" class="nav__link">ABOUT</a>
+                <a href="#work" class="nav__link">WORK</a>
+                <a href="#tech" class="nav__link">STACK</a>
+                <a href="#projects" class="nav__link">PROJECTS</a>
+                <a href="#contact" class="nav__link nav__link--cta">CONTACT</a>
             </div>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <!--<section id="home" class="hero">
-        <div class="hero-content">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="terminal-button close"></span>
-                    <span class="terminal-button minimize"></span>
-                    <span class="terminal-button maximize"></span>
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__grid"></div>
+        </div>
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__label">
+                    <span class="hero__label-text">AVAILABLE FOR OPPORTUNITIES</span>
+                    <span class="hero__label-dot"></span>
                 </div>
-                <div class="terminal-body">
-                    <p class="terminal-line">
-                        <span class="prompt">matthias@portfolio:~$</span>
-                        <span class="command">whoami</span>
-                    </p>
-                    <p class="terminal-output typing-animation">Software Developer</p>
-                    <p class="terminal-line">
-                        <span class="prompt">matthias@portfolio:~$</span>
-                        <span class="command">cat skills.txt</span>
-                    </p>
-                    <p class="terminal-output typing-animation-delay">Software Development | AI Development | Leader</p>
-                    <p class="terminal-line">
-                        <span class="prompt">matthias@portfolio:~$</span>
-                        <span class="cursor">_</span>
-                    </p>
+                <h2 class="hero__title">
+                    <span class="hero__title-line">MATTHIAS</span>
+                    <span class="hero__title-line hero__title-line--accent">DORNER</span>
+                </h2>
+                <p class="hero__subtitle">SOFTWARE DEVELOPER / AI SPECIALIST / TECHNICAL LEADER</p>
+                <div class="hero__cta">
+                    <a href="#projects" class="btn btn--primary">
+                        <span>VIEW PROJECTS</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn--secondary">
+                        <span>GET IN TOUCH</span>
+                    </a>
                 </div>
             </div>
-            <h1 class="glitch" data-text="Matthias Dorner">Matthias Dorner</h1>
-            <p class="subtitle">Turning Ideas into Code</p>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>-->
-
-    <!-- Main Content -->
-    <main id="main-content">
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="code-bracket">{</span>
-                über mich
-                <span class="code-bracket">}</span>
-            </h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-frame">
-                        <img src="assets/Pic.webp" alt="Matthias Dorner - Professionelles Profilbild des Software Developers" width="400" height="400" fetchpriority="high">
-                        <div class="image-overlay"></div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span>about.js</span>
-                        </div>
-                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
-                            <span class="property">name</span>: <span class="string">"Matthias Dorner"</span>,
-                            <span class="property">role</span>: <span class="string">"Software Developer"</span>,
-                            <span class="property">passion</span>: [
-                                <span class="string">"Clean Code"</span>,
-                                <span class="string">"Problem Solving"</span>,
-                                <span class="string">"AI"</span>,
-                            ],
-                            <span class="property">currentFocus</span>: <span class="string">"Building scalable applications"</span>,
-                            <span class="property">funFact</span>: <span class="string">"Coffee-driven development"</span>
-                        };</code>
-                    </pre>
-                    </div>
-                    <p class="about-description">
-                        Leidenschaftlicher Software-Entwickler mit Fokus auf moderne Business-Anwendungen
-                        und Clean Code. Ich liebe es, komplexe Probleme in elegante Lösungen zu verwandeln
-                        und dabei stets die neuesten Technologien im Blick zu behalten.
-                    </p>
+            <div class="hero__image">
+                <div class="hero__image-frame">
+                    <img src="assets/Pic.webp" alt="Matthias Dorner" width="500" height="500">
+                    <div class="hero__image-accent"></div>
                 </div>
             </div>
+        </div>
+        <div class="hero__scroll">
+            <span>SCROLL</span>
+            <div class="hero__scroll-line"></div>
         </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section id="tech" class="tech-stack">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="code-bracket">&lt;</span>
-                Tech Stack
-                <span class="code-bracket">/&gt;</span>
-            </h2>
-            <div class="tech-grid">
-                <div class="tech-card" data-category="frontend">
-                    <div class="tech-icon"><i class="fab fa-react"></i></div>
-                    <h3>React</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 25%"></div>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about__container">
+            <div class="about__header">
+                <span class="section-label">01 / ÜBER MICH</span>
+                <h2 class="section-title">
+                    CODE IS MY<br>
+                    <span class="text-accent">CANVAS</span>
+                </h2>
+            </div>
+            <div class="about__content">
+                <div class="about__text">
+                    <p class="about__paragraph">
+                        Als leidenschaftlicher <strong>Software-Entwickler</strong> verwandle ich komplexe
+                        Herausforderungen in elegante, skalierbare Lösungen. Mein Fokus liegt auf
+                        <strong>Clean Code</strong>, modernen Architekturen und der Integration von
+                        <strong>AI-Technologien</strong> in Business-Anwendungen.
+                    </p>
+                    <p class="about__paragraph">
+                        Mit fundierter Erfahrung in <strong>Full-Stack Development</strong> und einem
+                        tiefen Verständnis für User Experience schaffe ich Produkte, die nicht nur
+                        funktionieren, sondern begeistern.
+                    </p>
+                    <div class="about__stats">
+                        <div class="stat">
+                            <span class="stat__number">4+</span>
+                            <span class="stat__label">JAHRE ERFAHRUNG</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">20+</span>
+                            <span class="stat__label">PROJEKTE</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">12+</span>
+                            <span class="stat__label">TECHNOLOGIEN</span>
+                        </div>
                     </div>
                 </div>
-                <div class="tech-card" data-category="tools">
-                    <div class="tech-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 90%"></div>
+                <div class="about__skills">
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skill-card__title">DEVELOPMENT</h3>
+                        <p class="skill-card__text">
+                            Full-Stack Entwicklung mit modernen Frameworks und Best Practices
+                        </p>
                     </div>
-                </div>
-                <div class="tech-card" data-category="tools">
-                    <div class="tech-icon"><i class="devicon-c-plain"></i></div>
-                    <h3>C</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 30%"></div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="skill-card__title">AI INTEGRATION</h3>
+                        <p class="skill-card__text">
+                            Implementierung intelligenter Systeme und Machine Learning Lösungen
+                        </p>
                     </div>
-                </div>
-                <div class="tech-card" data-category="devops">
-                    <div class="tech-icon"><i class="devicon-cplusplus-plain"></i></div>
-                    <h3>C++</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 60%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="cloud">
-                    <div class="tech-icon"><i class="devicon-csharp-plain"></i></div>
-                    <h3>C#</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 40%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="backend">
-                    <div class="tech-icon"><i class="fab fa-node"></i></div>
-                    <h3>Node.js</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="backend">
-                    <div class="tech-icon"><i class="fab fa-python"></i></div>
-                    <h3>Python</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="tools">
-                    <div class="tech-icon"><i class="fab fa-html5"></i></div>
-                    <h3>HTML</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="tools">
-                    <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
-                    <h3>CSS</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="frontend">
-                    <div class="tech-icon"><i class="fab fa-js"></i></div>
-                    <h3>JavaScript</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="database">
-                    <div class="tech-icon"><i class="fas fa-database"></i></div>
-                    <h3>SQL</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="tech-card" data-category="tools">
-                    <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
-                    <h3>Git</h3>
-                    <div class="tech-bar">
-                        <div class="tech-progress" style="width: 90%"></div>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="skill-card__title">LEADERSHIP</h3>
+                        <p class="skill-card__text">
+                            Team-Leitung und Management in anspruchsvollen Projekten
+                        </p>
                     </div>
                 </div>
             </div>
@@ -289,369 +277,294 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="code-bracket">/*</span>
-                Berufserfahrung
-                <span class="code-bracket">*/</span>
-            </h2>
-            <div class="timeline">
+    <section class="work" id="work">
+        <div class="work__container">
+            <div class="work__header">
+                <span class="section-label">02 / BERUFSERFAHRUNG</span>
+                <h2 class="section-title">
+                    BUILDING THE<br>
+                    <span class="text-accent">FUTURE</span>
+                </h2>
+            </div>
+            <div class="work__timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="experience-card">
-                            <div class="experience-header">
-                                <h3>Founder</h3>
-                                <span class="experience-period">2025 - Heute</span>
-                            </div>
-                            <h4 class="company">ClubMatch</h4>
-                            <ul class="experience-list">
-                                <li>Entwicklung und Architektur von skalierbaren IOS & Android Anwendung</li>
-                                <li>Entwicklung verschiedenen Unternehmens Strategien</li>
-                                <li>Erlernen von neuen Technologien</li>
-                                <li>Management von einem Startup</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span>React</span>
-                                <span>REST-API</span>
-                                <span>PostgreSQL</span>
-                            </div>
+                    <div class="timeline-item__year">2025</div>
+                    <div class="timeline-item__content">
+                        <div class="timeline-item__header">
+                            <h3 class="timeline-item__title">FOUNDER</h3>
+                            <span class="timeline-item__company">ClubMatch</span>
+                        </div>
+                        <p class="timeline-item__desc">
+                            Entwicklung einer skalierbaren iOS & Android Party-App mit React Native.
+                            Aufbau von Unternehmensstrategien und technischer Architektur.
+                        </p>
+                        <div class="timeline-item__tags">
+                            <span>React Native</span>
+                            <span>PostgreSQL</span>
+                            <span>REST-API</span>
+                            <span>Supabase</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="experience-card">
-                            <div class="experience-header">
-                                <h3>Security Supervisor</h3>
-                                <span class="experience-period">2025 - Heute</span>
-                            </div>
-                            <h4 class="company">SRE Security & Services</h4>
-                            <ul class="experience-list">
-                                <li>Leitung von verschiedenen Teams bis zu 20 Personen</li>
-                                <li>Treffen von sicherheits abhängigen Schritte</li>
-                                <li>Management im Stress Situationen</li>
-                            </ul>
-                            <div class="tech-tags">
-
-                            </div>
+                    <div class="timeline-item__year">2025</div>
+                    <div class="timeline-item__content">
+                        <div class="timeline-item__header">
+                            <h3 class="timeline-item__title">SECURITY SUPERVISOR</h3>
+                            <span class="timeline-item__company">SRE Security & Services</span>
+                        </div>
+                        <p class="timeline-item__desc">
+                            Leitung von Teams bis zu 20 Personen. Management in kritischen
+                            Situationen und Treffen sicherheitsrelevanter Entscheidungen.
+                        </p>
+                        <div class="timeline-item__tags">
+                            <span>Team Management</span>
+                            <span>Krisenmanagement</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="experience-card">
-                            <div class="experience-header">
-                                <h3>Chief Executive Officer</h3>
-                                <span class="experience-period">2025 - 2025</span>
-                            </div>
-                            <h4 class="company">BravoDesk (Selbstständig)</h4>
-                            <ul class="experience-list">
-                                <li>Entwicklung von einem AI Support Discord Bot</li>
-                                <li>Entwicklung eigener API</li>
-                                <li>Performance-Optimierung und SEO</li>
-                                <li>Marketing & Business Development</li>
-                                <li>Buchführung nach Österreichischem Gesetz</li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span>MySQL</span>
-                                <span>JavaScript</span>
-                                <span>REST-API</span>
-                                <span>NodeJS</span>
-                                <span>KI</span>
-                            </div>
+                    <div class="timeline-item__year">2025</div>
+                    <div class="timeline-item__content">
+                        <div class="timeline-item__header">
+                            <h3 class="timeline-item__title">CEO</h3>
+                            <span class="timeline-item__company">BravoDesk (Selbstständig)</span>
+                        </div>
+                        <p class="timeline-item__desc">
+                            Entwicklung eines AI-gestützten Support Discord Bots. Aufbau eigener
+                            API, Marketing und Business Development.
+                        </p>
+                        <div class="timeline-item__tags">
+                            <span>AI</span>
+                            <span>Node.js</span>
+                            <span>MySQL</span>
+                            <span>REST-API</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="experience-card">
-                            <div class="experience-header">
-                                <h3>Lehrling </h3>
-                                <span class="experience-period">2022 - 2024</span>
-                            </div>
-                            <h4 class="company">KNAPP AG</h4>
-                            <ul class="experience-list">
-                                <li>Wartung von Projektrepositories</li>
-                                <li>Entwicklung in Python, C#, C++, Java, NodeJS usw.</li>
-                                <li>Projektdokumentation</li>
-                                <li>Erstellung, Aufbereitung und Abhalten von Projektpräsentationen</li>
-                                <li>Datenbankmanagement und -entwicklung (MySQL, Oracle)</li>
-                                <li>Grundlegende Konfiguration von Linux Systemen</li>
-                                <li>Erstellung und Durchführung von Softwaretests/li>
-                            </ul>
-                            <div class="tech-tags">
-                                <span>Java</span>
-                                <span>C++</span>
-                                <span>C#</span>
-                                <span>MySQL</span>
-                                <span>NodeJS</span>
-                                <span>REST-API</span>
-                            </div>
+                    <div class="timeline-item__year">2022-24</div>
+                    <div class="timeline-item__content">
+                        <div class="timeline-item__header">
+                            <h3 class="timeline-item__title">LEHRLING</h3>
+                            <span class="timeline-item__company">KNAPP AG</span>
+                        </div>
+                        <p class="timeline-item__desc">
+                            Entwicklung in Python, C#, C++, Java und Node.js. Datenbankmanagement,
+                            Linux-Konfiguration und Softwaretests.
+                        </p>
+                        <div class="timeline-item__tags">
+                            <span>Java</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>MySQL</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech" id="tech">
+        <div class="tech__container">
+            <div class="tech__header">
+                <span class="section-label">03 / TECH STACK</span>
+                <h2 class="section-title">
+                    TOOLS OF<br>
+                    <span class="text-accent">THE TRADE</span>
+                </h2>
+            </div>
+            <div class="tech__grid">
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                    <div class="tech-item__bar" data-level="100"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-node"></i>
+                    <span>Node.js</span>
+                    <div class="tech-item__bar" data-level="82"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-brain"></i>
+                    <span>AI</span>
+                    <div class="tech-item__bar" data-level="70"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                    <div class="tech-item__bar" data-level="85"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                    <div class="tech-item__bar" data-level="100"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                    <div class="tech-item__bar" data-level="90"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-code"></i>
+                    <span>C++</span>
+                    <div class="tech-item__bar" data-level="60"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                    <div class="tech-item__bar" data-level="100"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                    <div class="tech-item__bar" data-level="100"></div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                    <div class="tech-item__bar" data-level="100"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="code-bracket">[</span>
-                Projekte
-                <span class="code-bracket">]</span>
-            </h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/projects/clubmatch-logo.webp" alt="ClubMatch - Party-App Logo für Event-Discovery mit React Native" class="project-logo" width="300" height="300">
-                        <div class="project-overlay">
-                            <a href="https://clubmatch.party/" class="project-link" aria-label="ClubMatch Website besuchen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+    <section class="projects" id="projects">
+        <div class="projects__container">
+            <div class="projects__header">
+                <span class="section-label">04 / PROJEKTE</span>
+                <h2 class="section-title">
+                    SELECTED<br>
+                    <span class="text-accent">WORK</span>
+                </h2>
+            </div>
+            <div class="projects__grid">
+                <article class="project-card project-card--large">
+                    <div class="project-card__image">
+                        <img src="assets/projects/clubmatch-logo.webp" alt="ClubMatch" width="400" height="400">
+                        <div class="project-card__overlay">
+                            <a href="https://clubmatch.party/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>VISIT SITE</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>ClubMatch</h3>
-                        <p>ClubMatch entwickelt eine Party-App, die Teenagern zwischen 16 und 30 Jahren hilft, Events zu entdecken. Aufgebaut wie TikTok und Tinder und das während Veranstalter kostenlos Reichweite und neue Gäste gewinnen..</p>
-                        <div class="project-tech">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">CLUBMATCH</h3>
+                        <p class="project-card__desc">
+                            Party-App für Teenager (16-30 Jahre) zur Event-Discovery.
+                            Entwickelt wie TikTok meets Tinder für Events.
+                        </p>
+                        <div class="project-card__tags">
                             <span>React Native</span>
                             <span>PostgreSQL</span>
                             <span>Supabase</span>
-                            <span>Expo</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/projects/bravodesk-logo.webp" alt="BravoDesk - KI-gesteuertes Discord Ticketsystem Logo mit OpenAI Integration" class="project-logo" width="300" height="300">
-                        <div class="project-overlay">
-                            <a href="https://github.com/MatzeTV-dev/BravoDesk" class="project-link" aria-label="BravoDesk auf GitHub ansehen" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/projects/bravodesk-logo.webp" alt="BravoDesk" width="300" height="300">
+                        <div class="project-card__overlay">
+                            <a href="https://github.com/MatzeTV-dev/BravoDesk" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>VIEW CODE</span>
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>BravoDesk</h3>
-                        <p>BravoDesk war ein KI-gesteuertes Ticketsystem, das speziell für Discord-Communities entwickelt wurde. Es ermöglichte Server-Besitzern und Moderatoren, den Nutzer-Support durch Integration einer kontextbewussten KI zu automatisieren.</p>
-                        <div class="project-tech">
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">BRAVODESK</h3>
+                        <p class="project-card__desc">
+                            KI-gesteuertes Discord Ticketsystem mit kontextbewusster AI.
+                        </p>
+                        <div class="project-card__tags">
                             <span>OpenAI</span>
-                            <span>JavaScript</span>
+                            <span>Node.js</span>
                             <span>REST-API</span>
-                            <span>AI</span>
-                            <span>NodeJS</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/projects/taplock-logo.webp" alt="TapLock - NFC-basierter Schlüssel zum Sperren von Apps, entwickelt mit Android Studio" class="project-logo" width="300" height="300">
-                        <div class="project-overlay">
-                            <a href="https://taplock.at/" class="project-link" aria-label="TapLock Website besuchen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="assets/projects/taplock-logo.webp" alt="TapLock" width="300" height="300">
+                        <div class="project-card__overlay">
+                            <a href="#projects" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>DISCONTINUED</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>TapLock</h3>
-                        <p>TapLock ist ein physischer NFC-basierter Schlüssel, der hilft, sich von digitalen Ablenkungen zu befreien. Durch Scannen des Schlüssels mit dem Smartphone werden ausgewählte Apps wie Instagram, TikTok oder YouTube sofort gesperrt oder entsperrt.</p>
-                        <div class="project-tech">
-                            <span>Android Studios</span>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">TAPLOCK</h3>
+                        <p class="project-card__desc">
+                            NFC-basierter physischer Schlüssel zum Sperren von Apps.
+                        </p>
+                        <div class="project-card__tags">
+                            <span>Android</span>
                             <span>Java</span>
-                            <span>3D Printing</span>
-                            <span>3D Modeling</span>
                             <span>NFC</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Showcase Section -->
-    <section id="showcase" class="showcase">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="code-bracket">&lt;</span>
-                Website Showcase
-                <span class="code-bracket">/&gt;</span>
-            </h2>
-            <p class="showcase-intro">
-                Moderne, responsive Websites für lokale Unternehmen. Hier findest du Demo-Websites
-                für verschiedene Branchen – perfekt optimiert für Mobile und Desktop.
-            </p>
-            <div class="showcase-grid">
-                <!-- Handwerksbetrieb -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="https://demos.dornerlabs.com/screenshots/handwerk-thumb.webp" alt="Schreinerei Mustermann - Demo-Website für Handwerksbetriebe mit Kontaktformular und Google Maps" width="600" height="400">
-                        <div class="showcase-overlay">
-                            <a href="https://demos.dornerlabs.com/handwerk/index.html" target="_blank" class="showcase-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-category">Handwerk</div>
-                        <h3>Schreinerei Mustermann</h3>
-                        <p>Professionelle Website für Handwerksbetriebe mit Leistungsübersicht, Kontaktformular und Standort-Integration.</p>
-                        <div class="showcase-features">
-                            <span><i class="fas fa-check"></i> Kontaktformular</span>
-                            <span><i class="fas fa-check"></i> Google Maps</span>
-                            <span><i class="fas fa-check"></i> Öffnungszeiten</span>
-                            <span><i class="fas fa-check"></i> Mobile-First</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Café/Bar -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="https://demos.dornerlabs.com/screenshots/cafe-thumb.webp" alt="Café Gemütlich - Demo-Website für Cafés und Bars mit Menü-Präsentation und Buchung" width="600" height="400">
-                        <div class="showcase-overlay">
-                            <a href="https://demos.dornerlabs.com/cafe/index.html" target="_blank" class="showcase-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-category">Gastronomie</div>
-                        <h3>Café Gemütlich</h3>
-                        <p>Einladende Website für Cafés und Bars mit Menü-Präsentation, Atmosphäre und Buchungsmöglichkeit.</p>
-                        <div class="showcase-features">
-                            <span><i class="fas fa-check"></i> Kontaktformular</span>
-                            <span><i class="fas fa-check"></i> Google Maps</span>
-                            <span><i class="fas fa-check"></i> Öffnungszeiten</span>
-                            <span><i class="fas fa-check"></i> Mobile-First</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Restaurant -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="https://demos.dornerlabs.com/screenshots/restaurant-thumb.webp" alt="Restaurant Bella Vista - Demo-Website für italienische Restaurants mit Speisekarte und Reservierung" width="600" height="400">
-                        <div class="showcase-overlay">
-                            <a href="https://demos.dornerlabs.com/restaurant/index.html" target="_blank" class="showcase-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-category">Restaurant</div>
-                        <h3>Restaurant Bella Vista</h3>
-                        <p>Elegante Restaurant-Website mit Speisekarte, Online-Reservierung und ansprechender Bildergalerie.</p>
-                        <div class="showcase-features">
-                            <span><i class="fas fa-check"></i> Kontaktformular</span>
-                            <span><i class="fas fa-check"></i> Google Maps</span>
-                            <span><i class="fas fa-check"></i> Öffnungszeiten</span>
-                            <span><i class="fas fa-check"></i> Mobile-First</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Friseur -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="https://demos.dornerlabs.com/screenshots/friseur-thumb.webp" alt="Salon Styles - Demo-Website für Friseursalons mit Service-Übersicht und Terminbuchung" width="600" height="400">
-                        <div class="showcase-overlay">
-                            <a href="https://demos.dornerlabs.com/friseur/index.html" target="_blank" class="showcase-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-category">Dienstleistung</div>
-                        <h3>Salon Styles</h3>
-                        <p>Moderne Friseur-Website mit Service-Übersicht, Preisliste und einfacher Terminbuchung.</p>
-                        <div class="showcase-features">
-                            <span><i class="fas fa-check"></i> Kontaktformular</span>
-                            <span><i class="fas fa-check"></i> Google Maps</span>
-                            <span><i class="fas fa-check"></i> Öffnungszeiten</span>
-                            <span><i class="fas fa-check"></i> Mobile-First</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bäckerei -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="https://demos.dornerlabs.com/screenshots/baeckerei-thumb.webp" alt="Bäckerei Frischbrot - Demo-Website für Handwerksbäckereien mit Produktübersicht und Angeboten" width="600" height="400">
-                        <div class="showcase-overlay">
-                            <a href="https://demos.dornerlabs.com/baeckerei/index.html" target="_blank" class="showcase-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-category">Einzelhandel</div>
-                        <h3>Bäckerei Frischbrot</h3>
-                        <p>Appetitliche Website für Bäckereien mit Produktübersicht, täglichen Angeboten und Filialen.</p>
-                        <div class="showcase-features">
-                            <span><i class="fas fa-check"></i> Kontaktformular</span>
-                            <span><i class="fas fa-check"></i> Google Maps</span>
-                            <span><i class="fas fa-check"></i> Öffnungszeiten</span>
-                            <span><i class="fas fa-check"></i> Mobile-First</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Autohaus -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="https://demos.dornerlabs.com/screenshots/autohaus-thumb.webp" alt="Autohaus Müller - Demo-Website für Autohäuser mit Fahrzeugpräsentation und Werkstatt-Service" width="600" height="400">
-                        <div class="showcase-overlay">
-                            <a href="https://demos.dornerlabs.com/autohaus/index.html" target="_blank" class="showcase-btn">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-category">Automobil</div>
-                        <h3>Autohaus Müller</h3>
-                        <p>Professionelle Website für Autohäuser mit Fahrzeugpräsentation, Service-Informationen und Werkstatt-Buchung.</p>
-                        <div class="showcase-features">
-                            <span><i class="fas fa-check"></i> Kontaktformular</span>
-                            <span><i class="fas fa-check"></i> Google Maps</span>
-                            <span><i class="fas fa-check"></i> Öffnungszeiten</span>
-                            <span><i class="fas fa-check"></i> Mobile-First</span>
-                        </div>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact__container">
+            <div class="contact__content">
+                <span class="section-label">05 / KONTAKT</span>
+                <h2 class="contact__title">
+                    LET'S BUILD<br>
+                    <span class="text-accent">SOMETHING GREAT</span>
+                </h2>
+                <p class="contact__text">
+                    Auf der Suche nach einem talentierten Developer für dein nächstes Projekt?
+                    Lass uns reden.
+                </p>
+                <div class="contact__links">
+                    <a href="mailto:matthias@dornerlabs.com" class="contact__link">
+                        <i class="fas fa-envelope"></i>
+                        <span>matthias@dornerlabs.com</span>
+                    </a>
+                    <div class="contact__social">
+                        <a href="https://github.com/MatzeTV-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/matthias-dorner-70714629b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_matthias_l_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+            <div class="contact__image">
+                <div class="contact__accent"></div>
+            </div>
         </div>
     </section>
-    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>&lt;/DL&gt;</h3>
-                    <p>Turning Ideas into Code</p>
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">DORNERLABS</span>
+                    <p class="footer__tagline">Building digital excellence</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <p>Email: matthias@dornerlabs.com</p>
-                    <p>Location: Österreich</p>
+                <div class="footer__bottom">
+                    <p>&copy; 2025 Matthias Dorner. All rights reserved.</p>
+                    <p>Designed & Developed with <span class="text-accent">❤</span></p>
                 </div>
-                <div class="footer-section">
-                    <h4>Social</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/MatzeTV-dev" aria-label="GitHub Profil besuchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/matthias-dorner-70714629b/" aria-label="LinkedIn Profil besuchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/_matthias_l_/" aria-label="Instagram Profil besuchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Matthias Dorner. All rights reserved.</p>
             </div>
         </div>
     </footer>

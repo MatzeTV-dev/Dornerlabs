@@ -1,93 +1,72 @@
-// ===== Core JavaScript for Dornerlabs Main Site =====
+// ===================================
+// DORNERLABS MAIN - INTERACTIONS
+// ===================================
 
-// ===== Mobile Navigation =====
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
-const body = document.body;
+// ===== NAVIGATION =====
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav__link');
 
-function toggleMenu() {
-    navMenu.classList.toggle('active');
-    body.classList.toggle('menu-open');
-
-    // Animate hamburger
-    const spans = hamburger.querySelectorAll('span');
-    const isActive = navMenu.classList.contains('active');
-    spans[0].style.transform = isActive ? 'rotate(45deg) translate(5px, 5px)' : 'none';
-    spans[1].style.opacity = isActive ? '0' : '1';
-    spans[2].style.transform = isActive ? 'rotate(-45deg) translate(7px, -6px)' : 'none';
-}
-
-function closeMenu() {
-    navMenu.classList.remove('active');
-    body.classList.remove('menu-open');
-    const spans = hamburger.querySelectorAll('span');
-    spans[0].style.transform = 'none';
-    spans[1].style.opacity = '1';
-    spans[2].style.transform = 'none';
-}
-
-if (hamburger) {
-    hamburger.addEventListener('click', toggleMenu);
-}
-
-// Close mobile menu when clicking on a link
-navLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (navMenu.classList.contains('active') &&
-        !navMenu.contains(e.target) &&
-        !hamburger.contains(e.target)) {
-        closeMenu();
-    }
-});
-
-// Close menu on escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-        closeMenu();
-    }
-});
-
-// ===== Navbar Scroll Effect =====
-const navbar = document.querySelector('.navbar');
-
+// Scroll effect
+let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
-        navbar.classList.add('scrolled');
+        nav.classList.add('scrolled');
     } else {
-        navbar.classList.remove('scrolled');
+        nav.classList.remove('scrolled');
     }
+
+    lastScroll = currentScroll;
 });
 
-// ===== Smooth Scroll for Navigation Links =====
+// Mobile menu toggle
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+}
+
+// Close menu on link click
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
 
         if (target) {
-            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+            const offset = 80;
+            const targetPosition = target.offsetTop - offset;
+
             window.scrollTo({
-                top: offsetTop,
+                top: targetPosition,
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// ===== Intersection Observer for Scroll Animations =====
+// ===== SCROLL ANIMATIONS =====
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
 };
 
-const animateOnScroll = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -96,149 +75,170 @@ const animateOnScroll = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Elements to animate on scroll
-const animatedElements = document.querySelectorAll('.service-card, .pricing-card, .portfolio-card');
-animatedElements.forEach((el, index) => {
-    // Initial state
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+// Animate elements on scroll
+const animateOnScroll = (selector, delay = 0) => {
+    document.querySelectorAll(selector).forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(50px)';
+        element.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * delay}s`;
+        observer.observe(element);
+    });
+};
 
-    // Observe
-    animateOnScroll.observe(el);
+// Apply animations
+animateOnScroll('.service-card', 0.1);
+animateOnScroll('.pricing-card', 0.1);
+animateOnScroll('.portfolio-card', 0.1);
+
+// ===== SCROLL PROGRESS BAR =====
+const progressBar = document.createElement('div');
+progressBar.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--electric);
+    z-index: 9999;
+    transition: width 0.1s ease;
+`;
+document.body.appendChild(progressBar);
+
+window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    progressBar.style.width = scrolled + '%';
 });
 
-// Fallback: Make all elements visible after 2 seconds if observer doesn't work
-setTimeout(() => {
-    animatedElements.forEach(el => {
-        if (el.style.opacity === '0') {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        }
-    });
-}, 2000);
-
-// ===== Contact Form Validation & Security =====
-
-// Rate limiting storage
-const formSubmissions = {};
-
-// Spam pattern detection
-function hasSpamPatterns(text) {
-    // Check for excessive URLs
-    const urlCount = (text.match(/https?:\/\//g) || []).length;
-    if (urlCount > 2) return true;
-
-    // Check for spam keywords
-    const spamWords = ['cialis', 'viagra', 'casino', 'lottery', 'crypto', 'bitcoin', 'prize', 'winner'];
-    return spamWords.some(word => text.toLowerCase().includes(word));
-}
-
-// Rate limiting check
-function checkRateLimit(email) {
-    const now = Date.now();
-    const lastTime = formSubmissions[email] || 0;
-
-    // 30 seconds minimum between submissions
-    if (now - lastTime < 30000) {
-        return false;
-    }
-
-    formSubmissions[email] = now;
-    return true;
-}
-
-// Email validation
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Form validation and submission
+// ===== FORM HANDLING =====
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
+        // Let Formspree handle the submission
+        const button = this.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+
+        button.innerHTML = '<span>WIRD GESENDET...</span>';
+        button.disabled = true;
+
+        // Reset after 3 seconds (Formspree will redirect)
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.disabled = false;
+        }, 3000);
+    });
+}
+
+// ===== REVEAL ON SCROLL =====
+const revealSections = document.querySelectorAll('section');
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+revealSections.forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(30px)';
+    section.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
+    revealObserver.observe(section);
+});
+
+// ===== DYNAMIC TEXT EFFECT =====
+const heroAccent = document.querySelector('.hero__title-line--accent');
+if (heroAccent) {
+    const text = heroAccent.textContent;
+    heroAccent.textContent = '';
+
+    let i = 0;
+    const typeWriter = () => {
+        if (i < text.length) {
+            heroAccent.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    };
+
+    setTimeout(typeWriter, 500);
+}
+
+// ===== CONSOLE MESSAGE =====
+console.log('%c🚀 DORNERLABS', 'font-size: 24px; font-weight: bold; color: #d0ff00; background: #0a0a0a; padding: 10px 20px;');
+console.log('%cWeb Development & Consulting', 'font-size: 14px; color: #888;');
+console.log('%c💼 Interessiert an einer Zusammenarbeit? Kontaktieren Sie uns!', 'font-size: 12px; color: #d0ff00;');
+
+// ===== PERFORMANCE =====
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    console.log('%c✅ Website loaded successfully!', 'font-size: 12px; color: #d0ff00; font-weight: bold;');
+});
+
+// ===== KEYBOARD SHORTCUTS =====
+document.addEventListener('keydown', (e) => {
+    // Press 'H' to go to top
+    if (e.key === 'h' || e.key === 'H') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Press 'C' to go to contact
+    if (e.key === 'c' || e.key === 'C') {
+        const contact = document.getElementById('contact');
+        if (contact) {
+            contact.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+});
+
+// ===== EASTER EGG =====
+let clickCount = 0;
+const logo = document.querySelector('.nav__logo');
+
+if (logo) {
+    logo.addEventListener('click', (e) => {
         e.preventDefault();
+        clickCount++;
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        const service = document.getElementById('service').value;
+        if (clickCount === 5) {
+            document.body.style.animation = 'hueRotate 3s linear';
+            setTimeout(() => {
+                document.body.style.animation = '';
+                clickCount = 0;
+            }, 3000);
 
-        let errors = [];
-
-        // Validate name
-        if (name.trim().length < 2) {
-            errors.push('Name must be at least 2 characters long');
-        }
-
-        // Validate email
-        if (!validateEmail(email)) {
-            errors.push('Please enter a valid email address');
-        }
-
-        // Check rate limit
-        if (!checkRateLimit(email)) {
-            errors.push('Please wait 30 seconds before submitting another message');
-        }
-
-        // Check spam patterns
-        if (hasSpamPatterns(message)) {
-            errors.push('Your message contains suspicious content');
-        }
-
-        // Validate message length
-        if (message.trim().length < 10) {
-            errors.push('Message must be at least 10 characters long');
-        }
-
-        if (message.trim().length > 5000) {
-            errors.push('Message must not exceed 5000 characters');
-        }
-
-        // If there are errors, show them and don't submit
-        if (errors.length > 0) {
-            alert(errors.join('\n'));
-            return;
-        }
-
-        // If validation passes, submit the form
-        this.submit();
-
-        // Show success message (optional)
-        console.log('Form submitted successfully!');
-    });
-
-    // Real-time validation feedback
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
-
-    emailInput.addEventListener('blur', function() {
-        if (this.value && !validateEmail(this.value)) {
-            this.style.borderColor = '#ef4444';
-        } else {
-            this.style.borderColor = '';
-        }
-    });
-
-    messageInput.addEventListener('input', function() {
-        const length = this.value.length;
-        if (length < 10 || length > 5000) {
-            this.style.borderColor = '#ef4444';
-        } else {
-            this.style.borderColor = '';
+            console.log('%c🎨 Easter Egg Activated!', 'font-size: 16px; color: #d0ff00; font-weight: bold;');
         }
     });
 }
 
-// ===== Language Preference Storage (Optional) =====
-const currentLang = document.documentElement.lang;
-if (currentLang) {
-    localStorage.setItem('preferredLanguage', currentLang);
-}
+// Add hue rotate animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes hueRotate {
+        0% { filter: hue-rotate(0deg); }
+        100% { filter: hue-rotate(360deg); }
+    }
+`;
+document.head.appendChild(style);
 
-// ===== Console Easter Egg (Optional) =====
-console.log('%c👋 Hello Developer!', 'font-size: 20px; font-weight: bold; color: #0066ff;');
-console.log('%cLike what you see? Let\'s work together!', 'font-size: 14px; color: #6b7280;');
-console.log('%c🌐 dornerlabs.com', 'font-size: 14px; color: #0066ff; font-weight: bold;');
+// ===== LAZY LOADING IMAGES =====
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}

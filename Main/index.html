@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Essential SEO -->
-    <meta name="description" content="Professionelle Webentwicklung & Consulting für Ihr Business. Modern, performant, optimiert. Dornerlabs – Ihr Partner für digitale Lösungen.">
-    <meta name="keywords" content="Webentwicklung, Web Development, Consulting, Business Website, Portfolio, Dornerlabs">
-    <meta name="author" content="Dornerlabs">
-    <meta name="robots" content="index, follow">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dornerlabs - Professionelle Webentwicklung & Consulting aus Österreich. Moderne Business-Websites, AI-Integration, Workflow Automation. Ab €1.499. Starter, Professional & Enterprise Pakete.">
+    <meta name="keywords" content="Webentwicklung, Web Development, Consulting, Business Website, AI Integration, Workflow Automation, React, Node.js, Österreich, Dornerlabs, Website erstellen, Web Developer">
+    <meta name="author" content="Matthias Dorner">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <!-- Open Graph (Social Media) -->
-    <meta property="og:title" content="Dornerlabs – Web Development & Consulting">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Dornerlabs – Web Development & Consulting | Ab €1.499">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://dornerlabs.com/assets/og-image.webp">
     <meta property="og:url" content="https://dornerlabs.com">
     <meta property="og:site_name" content="Dornerlabs">
-    <meta property="og:description" content="Professionelle Webentwicklung & Consulting für Ihr Business. Modern, performant, optimiert.">
+    <meta property="og:description" content="Professionelle Webentwicklung & Consulting aus Österreich. Modern, performant, optimiert. Starter ab €1.499, Professional ab €3.999.">
+    <meta property="og:locale" content="de_AT">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dornerlabs – Web Development & Consulting">
-    <meta name="twitter:description" content="Professionelle Webentwicklung & Consulting für Ihr Business.">
+    <meta name="twitter:description" content="Professionelle Webentwicklung aus Österreich. Modern, performant, skalierbar.">
     <meta name="twitter:image" content="https://dornerlabs.com/assets/og-image.webp">
+    <meta name="twitter:site" content="@dornerlabs">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://dornerlabs.com">
 
-    <!-- Hreflang for Bilingual Support -->
+    <!-- Hreflang -->
     <link rel="alternate" hreflang="de" href="https://dornerlabs.com/index.html">
     <link rel="alternate" hreflang="en" href="https://dornerlabs.com/index-en.html">
     <link rel="alternate" hreflang="x-default" href="https://dornerlabs.com/index.html">
@@ -38,80 +40,82 @@
     <link rel="icon" type="image/x-icon" href="https://portfolio.dornerlabs.com/assets/icon/dornerlabs-icon-dark.ico">
     <link rel="shortcut icon" type="image/x-icon" href="https://portfolio.dornerlabs.com/assets/icon/dornerlabs-icon-dark.ico">
 
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
-
-    <!-- Preload fonts -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-
-    <!-- Critical CSS - Inlined for faster initial render -->
-    <style>
-        /* Reset & Base */
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{
-            --primary-color:#0066ff;
-            --secondary-color:#6366f1;
-            --accent-color:#10b981;
-            --bg-light:#ffffff;
-            --bg-lighter:#f9fafb;
-            --bg-card:#f3f4f6;
-            --text-primary:#111827;
-            --text-secondary:#6b7280;
-            --text-muted:#9ca3af;
-            --border-color:#e5e7eb;
-        }
-        html{scroll-behavior:smooth}
-        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg-light);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
-        body.menu-open{overflow:hidden}
-        .container{max-width:1200px;margin:0 auto;padding:0 20px}
-        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
-        /* Navigation */
-        .navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;border-bottom:1px solid var(--border-color);transition:all 0.3s ease}
-        .navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.1)}
-        .nav-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-        .logo{font-size:1.5rem;font-weight:bold;color:var(--primary-color);font-family:monospace}
-        .nav-menu{display:flex;list-style:none;gap:2rem;align-items:center}
-        .nav-link{color:var(--text-primary);text-decoration:none;transition:color 0.3s ease;padding:0.5rem 0}
-        .nav-link:hover,.nav-link:focus{color:var(--primary-color)}
-        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1001}
-        .hamburger span{width:25px;height:3px;background:var(--primary-color);border-radius:3px;transition:all 0.3s ease}
-        /* Hero Section - Above the fold */
-        .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 0 4rem;background:linear-gradient(135deg,var(--bg-lighter) 0%,var(--bg-light) 100%)}
-        .hero-content{text-align:center;max-width:800px}
-        .hero-title{font-size:3.5rem;line-height:1.2;margin-bottom:1.5rem;font-weight:700}
-        .highlight{color:var(--primary-color)}
-    </style>
-
-    <!-- Non-critical CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- Critical CSS -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --electric:#d0ff00;
+            --black:#0a0a0a;
+            --dark-gray:#1a1a1a;
+            --mid-gray:#2a2a2a;
+            --light-gray:#888;
+            --white:#fafafa;
+        }
+        body{
+            font-family:'IBM Plex Mono',monospace;
+            background:var(--black);
+            color:var(--white);
+            overflow-x:hidden;
+            line-height:1.6;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family:'Clash Display',sans-serif;
+            font-weight:700;
+            line-height:1.1;
+        }
+    </style>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JSON-LD Structured Data for GEO & SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Dornerlabs",
+      "alternateName": "DL",
       "url": "https://dornerlabs.com",
       "logo": "https://portfolio.dornerlabs.com/assets/icon/dornerlabs-icon-dark.ico",
-      "description": "Professionelle Webentwicklung und Consulting für moderne Business-Anwendungen.",
+      "description": "Professionelle Webentwicklung und Consulting für moderne Business-Anwendungen aus Österreich. Spezialisiert auf React, Node.js, AI-Integration und Workflow Automation.",
+      "slogan": "Building digital excellence",
+      "founder": {
+        "@type": "Person",
+        "name": "Matthias Dorner",
+        "jobTitle": "Software Developer & CEO"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Service",
         "email": "matthias.dorner@dornerlabs.com",
-        "availableLanguage": ["German", "English"]
+        "availableLanguage": ["German", "English"],
+        "areaServed": ["AT", "DE", "CH"]
       },
       "sameAs": [
-        "https://github.com/MatzeTV-dev"
+        "https://github.com/MatzeTV-dev",
+        "https://portfolio.dornerlabs.com"
       ],
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "AT"
-      }
+      },
+      "knowsAbout": [
+        "Web Development",
+        "Software Development",
+        "AI Integration",
+        "React",
+        "Node.js",
+        "Workflow Automation",
+        "Consulting"
+      ]
     }
     </script>
 
@@ -125,477 +129,523 @@
         "@type": "Organization",
         "name": "Dornerlabs"
       },
-      "areaServed": "DE",
-      "description": "Professionelle Webentwicklung mit Fokus auf Performance und moderne Technologien."
+      "areaServed": ["AT", "DE", "CH"],
+      "description": "Professionelle Webentwicklung mit Fokus auf Performance, moderne Technologien und Clean Code.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Starter Paket",
+          "description": "One-Page Website mit Responsive Design, Kontaktformular und SEO-Optimierung",
+          "price": "1499",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professional Paket",
+          "description": "Multi-Page Website mit Custom Design, CMS Integration und Advanced SEO",
+          "price": "3999",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise Paket",
+          "description": "Komplexe Web-Anwendung mit individueller Entwicklung und API-Integration",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
     }
     </script>
 
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Dornerlabs",
+      "url": "https://dornerlabs.com",
+      "description": "Professionelle Webentwicklung & Consulting aus Österreich",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Dornerlabs"
+      },
+      "inLanguage": ["de", "en"]
+    }
+    </script>
+
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dornerlabs.com"
+      }]
+    }
+    </script>
 </head>
 <body>
-    <!-- SEO H1 - visually hidden but accessible to search engines and screen readers -->
+    <!-- SEO H1 -->
     <h1 class="sr-only">Dornerlabs – Web Development & Consulting für Ihr Business</h1>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">&lt;DL&gt;</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#pricing" class="nav-link">Preise</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
-                <li class="language-switcher">
-                    <a href="index.html" class="lang-link active" hreflang="de">DE</a>
-                    <span class="separator">|</span>
-                    <a href="index-en.html" class="lang-link" hreflang="en">EN</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#hero" class="nav__logo">DORNERLABS</a>
+            <div class="nav__menu" id="navMenu">
+                <a href="#services" class="nav__link">SERVICES</a>
+                <a href="#pricing" class="nav__link">PREISE</a>
+                <a href="#portfolio" class="nav__link">PORTFOLIO</a>
+                <a href="#contact" class="nav__link nav__link--cta">KONTAKT</a>
+                <div class="nav__lang">
+                    <a href="index.html" class="nav__lang-link active">DE</a>
+                    <span>/</span>
+                    <a href="index-en.html" class="nav__lang-link">EN</a>
+                </div>
             </div>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main id="main-content">
-
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2 class="hero-title">
-                    <span class="highlight">Web Development</span> & Consulting<br>für Ihr Business
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__grid"></div>
+        </div>
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__label">
+                    <span class="hero__label-text">WEB DEVELOPMENT & CONSULTING</span>
+                </div>
+                <h2 class="hero__title">
+                    <span class="hero__title-line">DIGITAL</span>
+                    <span class="hero__title-line hero__title-line--accent">EXCELLENCE</span>
                 </h2>
-                <p class="hero-subtitle">
-                    Professionelle Websites und technische Beratung – von der Idee bis zum Launch. Modern, performant und skalierbar.
+                <p class="hero__subtitle">
+                    VON DER IDEE BIS ZUM LAUNCH / MODERN / PERFORMANT / SKALIERBAR
                 </p>
-                <a href="#contact" class="cta-button cta-primary">
-                    Projekt besprechen
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="services">
-            <div class="container">
-                <h2 class="section-title">Unsere Services</h2>
-                <p class="section-subtitle">Was wir für Sie tun können</p>
-
-                <div class="services-grid">
-                    <!-- Web Development -->
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Web Development</h3>
-                        <p class="service-description">
-                            Maßgeschneiderte Webanwendungen mit modernen Technologien. Von der einfachen Unternehmenswebsite bis zur komplexen Business-Anwendung.
-                        </p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Responsive Design für alle Geräte</li>
-                            <li><i class="fas fa-check"></i> Performance-Optimierung (Core Web Vitals)</li>
-                            <li><i class="fas fa-check"></i> SEO & GEO Integration</li>
-                            <li><i class="fas fa-check"></i> Security Best Practices</li>
-                            <li><i class="fas fa-check"></i> E-Commerce Lösungen</li>
-                        </ul>
-                        <a href="#contact" class="btn-secondary">Details anfragen</a>
-                    </article>
-
-                    <!-- Consulting -->
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Consulting</h3>
-                        <p class="service-description">
-                            Technische Beratung für Ihr digitales Projekt. Wir helfen Ihnen bei der Auswahl der richtigen Technologien und Architektur.
-                        </p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Technologie-Beratung</li>
-                            <li><i class="fas fa-check"></i> Architektur-Design</li>
-                            <li><i class="fas fa-check"></i> Code Review & Optimierung</li>
-                            <li><i class="fas fa-check"></i> Performance-Audit</li>
-                            <li><i class="fas fa-check"></i> Security-Audit</li>
-                        </ul>
-                        <a href="#contact" class="btn-secondary">Details anfragen</a>
-                    </article>
-
-                    <!-- Workflow Automation -->
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Workflow Automation</h3>
-                        <p class="service-description">
-                            Automatisierung Ihrer Geschäftsprozesse für mehr Effizienz. Von einfachen Workflows bis zur vollständigen Prozessautomatisierung.
-                        </p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Prozessanalyse & Optimierung</li>
-                            <li><i class="fas fa-check"></i> API-Integrationen</li>
-                            <li><i class="fas fa-check"></i> Workflow-Engines (Zapier, Make, n8n)</li>
-                            <li><i class="fas fa-check"></i> Custom Automation Scripts</li>
-                            <li><i class="fas fa-check"></i> Monitoring & Reporting</li>
-                        </ul>
-                        <a href="#contact" class="btn-secondary">Details anfragen</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="pricing">
-            <div class="container">
-                <h2 class="section-title">Preise & Pakete</h2>
-                <p class="section-subtitle">Transparente Preisgestaltung für jedes Budget</p>
-
-                <div class="pricing-grid">
-                    <!-- Starter Package -->
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Starter</h3>
-                            <div class="price">
-                                <span class="price-amount">Ab €1.499</span>
-                                <span class="price-period">einmalig</span>
-                            </div>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> One-Page Website</li>
-                            <li><i class="fas fa-check"></i> Responsive Design</li>
-                            <li><i class="fas fa-check"></i> Kontaktformular</li>
-                            <li><i class="fas fa-check"></i> SEO-Optimierung</li>
-                            <li><i class="fas fa-check"></i> 1 Monat Support</li>
-                        </ul>
-                        <a href="#contact" class="cta-button">Paket wählen</a>
-                    </div>
-
-                    <!-- Professional Package -->
-                    <div class="pricing-card featured">
-                        <div class="badge">Beliebt</div>
-                        <div class="pricing-header">
-                            <h3>Professional</h3>
-                            <div class="price">
-                                <span class="price-amount">Ab €3.999</span>
-                                <span class="price-period">einmalig</span>
-                            </div>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Multi-Page Website</li>
-                            <li><i class="fas fa-check"></i> Custom Design</li>
-                            <li><i class="fas fa-check"></i> CMS Integration</li>
-                            <li><i class="fas fa-check"></i> Advanced SEO & GEO</li>
-                            <li><i class="fas fa-check"></i> E-Commerce (optional)</li>
-                            <li><i class="fas fa-check"></i> 3 Monate Support</li>
-                        </ul>
-                        <a href="#contact" class="cta-button cta-primary">Paket wählen</a>
-                    </div>
-
-                    <!-- Enterprise Package -->
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h3>Enterprise</h3>
-                            <div class="price">
-                                <span class="price-amount">Auf Anfrage</span>
-                                <span class="price-period">individuell</span>
-                            </div>
-                        </div>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Komplexe Web-Anwendung</li>
-                            <li><i class="fas fa-check"></i> Individuelle Entwicklung</li>
-                            <li><i class="fas fa-check"></i> API-Integration</li>
-                            <li><i class="fas fa-check"></i> Skalierbare Architektur</li>
-                            <li><i class="fas fa-check"></i> Dedizierter Support</li>
-                            <li><i class="fas fa-check"></i> SLA garantiert</li>
-                        </ul>
-                        <a href="#contact" class="cta-button">Angebot anfordern</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Clients Section -->
-        <section class="clients">
-            <div class="container">
-                <h2 class="section-title">Vertrauen von</h2>
-                <p class="section-subtitle">Kunden, die bereits mit uns arbeiten</p>
-
-                <div class="clients-slider">
-                    <div class="clients-track">
-                        <!-- Client Logos - Duplicated for infinite scroll -->
-                        <div class="client-logo">
-                            <img src="assets/companies/Clubmatch.png" alt="ClubMatch" height="60">
-                            <span class="client-name">ClubMatch</span>
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/Bravodesk.png" alt="BravoDesk" height="60">
-                            <span class="client-name">BravoDesk</span>
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/TapLock.png" alt="TapLock" height="60">
-                            <span class="client-name">TapLock</span>
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/SpaceX.webp" alt="SpaceX" height="60">
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/KNAPP.jpg" alt="KNAPP" height="60">
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/Nasa.png" alt="NASA" height="60">
-                        </div>
-                        <!-- Duplicate for seamless loop -->
-                        <div class="client-logo">
-                            <img src="assets/companies/Clubmatch.png" alt="ClubMatch" height="60">
-                            <span class="client-name">ClubMatch</span>
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/Bravodesk.png" alt="BravoDesk" height="60">
-                            <span class="client-name">BravoDesk</span>
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/TapLock.png" alt="TapLock" height="60">
-                            <span class="client-name">TapLock</span>
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/SpaceX.webp" alt="SpaceX" height="60">
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/KNAPP.jpg" alt="KNAPP" height="60">
-                        </div>
-                        <div class="client-logo">
-                            <img src="assets/companies/Nasa.png" alt="NASA" height="60">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio/Case Studies Section -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <h2 class="section-title">Unsere Arbeiten</h2>
-                <p class="section-subtitle">Projekte, die wir realisiert haben</p>
-
-                <div class="portfolio-grid">
-                    <!-- Portfolio Site -->
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="https://portfolio.dornerlabs.com/assets/Pic.webp" alt="Portfolio Website" width="400" height="300">
-                            <div class="portfolio-overlay">
-                                <a href="https://portfolio.dornerlabs.com" class="portfolio-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Ansehen
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Developer Portfolio</h3>
-                            <p>Moderne Portfolio-Website mit Performance-Fokus, Dark Mode und interaktiven Animationen.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Demo Sites -->
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="https://demos.dornerlabs.com/screenshots/handwerk-thumb.webp" alt="Business Demos" width="400" height="300" onerror="this.src='https://portfolio.dornerlabs.com/assets/Pic.webp'">
-                            <div class="portfolio-overlay">
-                                <a href="https://demos.dornerlabs.com" class="portfolio-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Ansehen
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Business Templates</h3>
-                            <p>6 professionelle Business-Website-Templates für verschiedene Branchen (Restaurant, Autohaus, Café, etc.).</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Responsive</span>
-                                <span class="tech-tag">SEO</span>
-                                <span class="tech-tag">Modern</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ClubMatch -->
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="https://portfolio.dornerlabs.com/assets/projects/clubmatch-logo.webp" alt="ClubMatch - Party-App" width="400" height="300" onerror="this.src='https://portfolio.dornerlabs.com/assets/Pic.webp'">
-                            <div class="portfolio-overlay">
-                                <a href="https://clubmatch.party/" class="portfolio-link" target="_blank" rel="noopener noreferrer">
-                                    <i class="fas fa-external-link-alt"></i> Ansehen
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>ClubMatch</h3>
-                            <p>Party-App für Event-Discovery (16-30 Jahre). Aufgebaut wie TikTok und Tinder, während Veranstalter kostenlos Reichweite gewinnen.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">Supabase</span>
-                                <span class="tech-tag">Expo</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- BravoDesk -->
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="https://portfolio.dornerlabs.com/assets/projects/bravodesk-logo.webp" alt="BravoDesk - KI Discord Ticketsystem" width="400" height="300" onerror="this.src='https://portfolio.dornerlabs.com/assets/Pic.webp'">
-                            <div class="portfolio-overlay">
-                                <a href="https://github.com/MatzeTV-dev/BravoDesk" class="portfolio-link" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>BravoDesk</h3>
-                            <p>KI-gesteuertes Discord Ticketsystem mit kontextbewusster KI für automatisierten Nutzer-Support in Communities.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">OpenAI</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">REST-API</span>
-                                <span class="tech-tag">NodeJS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-cta-section">
-                    <a href="https://portfolio.dornerlabs.com" class="btn-secondary" target="_blank">
-                        Vollständiges Portfolio ansehen
+                <div class="hero__cta">
+                    <a href="#contact" class="btn btn--primary">
+                        <span>PROJEKT STARTEN</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="btn btn--secondary">
+                        <span>PORTFOLIO ANSEHEN</span>
                     </a>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="hero__scroll">
+            <span>SCROLL</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Kontakt</h2>
-                <p class="section-subtitle">Lassen Sie uns über Ihr Projekt sprechen</p>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services__container">
+            <div class="services__header">
+                <span class="section-label">01 / SERVICES</span>
+                <h2 class="section-title">
+                    WAS WIR<br>
+                    <span class="text-accent">ANBIETEN</span>
+                </h2>
+            </div>
+            <div class="services__grid">
+                <article class="service-card">
+                    <div class="service-card__number">01</div>
+                    <div class="service-card__icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-card__title">WEB DEVELOPMENT</h3>
+                    <p class="service-card__desc">
+                        Maßgeschneiderte Webanwendungen mit modernen Technologien.
+                        Von der einfachen Website bis zur komplexen Business-Anwendung.
+                    </p>
+                    <ul class="service-card__features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Performance-Optimierung</li>
+                        <li><i class="fas fa-check"></i> SEO & GEO Integration</li>
+                        <li><i class="fas fa-check"></i> Security Best Practices</li>
+                        <li><i class="fas fa-check"></i> E-Commerce Lösungen</li>
+                    </ul>
+                    <a href="#contact" class="service-card__link">
+                        MEHR ERFAHREN
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
 
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Kontaktinformationen</h3>
-                        <p>Haben Sie Fragen oder möchten Sie ein Projekt besprechen? Kontaktieren Sie uns!</p>
+                <article class="service-card">
+                    <div class="service-card__number">02</div>
+                    <div class="service-card__icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="service-card__title">CONSULTING</h3>
+                    <p class="service-card__desc">
+                        Technische Beratung für Ihr digitales Projekt. Wir helfen bei der
+                        Auswahl der richtigen Technologien und Architektur.
+                    </p>
+                    <ul class="service-card__features">
+                        <li><i class="fas fa-check"></i> Technologie-Beratung</li>
+                        <li><i class="fas fa-check"></i> Architektur-Design</li>
+                        <li><i class="fas fa-check"></i> Code Review</li>
+                        <li><i class="fas fa-check"></i> Performance-Audit</li>
+                        <li><i class="fas fa-check"></i> Security-Audit</li>
+                    </ul>
+                    <a href="#contact" class="service-card__link">
+                        MEHR ERFAHREN
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
 
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4>Email</h4>
-                                    <a href="mailto:matthias.dorner@dornerlabs.com">matthias.dorner@dornerlabs.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <h4>Standort</h4>
-                                    <p>Österreich</p>
-                                </div>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fab fa-github"></i>
-                                <div>
-                                    <h4>GitHub</h4>
-                                    <a href="https://github.com/MatzeTV-dev" target="_blank">github.com/MatzeTV-dev</a>
-                                </div>
-                            </div>
+                <article class="service-card">
+                    <div class="service-card__number">03</div>
+                    <div class="service-card__icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="service-card__title">AUTOMATION</h3>
+                    <p class="service-card__desc">
+                        Automatisierung Ihrer Geschäftsprozesse für mehr Effizienz.
+                        Von einfachen Workflows bis zur vollständigen Prozessautomatisierung.
+                    </p>
+                    <ul class="service-card__features">
+                        <li><i class="fas fa-check"></i> Prozessanalyse</li>
+                        <li><i class="fas fa-check"></i> API-Integrationen</li>
+                        <li><i class="fas fa-check"></i> Workflow-Engines</li>
+                        <li><i class="fas fa-check"></i> Custom Scripts</li>
+                        <li><i class="fas fa-check"></i> Monitoring</li>
+                    </ul>
+                    <a href="#contact" class="service-card__link">
+                        MEHR ERFAHREN
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing__container">
+            <div class="pricing__header">
+                <span class="section-label">02 / PREISE</span>
+                <h2 class="section-title">
+                    TRANSPARENTE<br>
+                    <span class="text-accent">PREISGESTALTUNG</span>
+                </h2>
+            </div>
+            <div class="pricing__grid">
+                <div class="pricing-card">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__title">STARTER</h3>
+                        <div class="pricing-card__price">
+                            <span class="price-amount">€1.499</span>
+                            <span class="price-period">EINMALIG</span>
                         </div>
                     </div>
+                    <ul class="pricing-card__features">
+                        <li><i class="fas fa-check"></i> One-Page Website</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Kontaktformular</li>
+                        <li><i class="fas fa-check"></i> SEO-Optimierung</li>
+                        <li><i class="fas fa-check"></i> 1 Monat Support</li>
+                    </ul>
+                    <a href="#contact" class="pricing-card__cta">
+                        PAKET WÄHLEN
+                    </a>
+                </div>
 
-                    <div class="contact-form-wrapper">
-                        <form id="contactForm" action="https://formspree.io/f/xqedagov" method="POST">
-                            <!-- Honeypot (hidden from real users, bots fill it) -->
-                            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+                <div class="pricing-card pricing-card--featured">
+                    <div class="pricing-card__badge">BELIEBT</div>
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__title">PROFESSIONAL</h3>
+                        <div class="pricing-card__price">
+                            <span class="price-amount">€3.999</span>
+                            <span class="price-period">EINMALIG</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><i class="fas fa-check"></i> Multi-Page Website</li>
+                        <li><i class="fas fa-check"></i> Custom Design</li>
+                        <li><i class="fas fa-check"></i> CMS Integration</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO & GEO</li>
+                        <li><i class="fas fa-check"></i> E-Commerce (optional)</li>
+                        <li><i class="fas fa-check"></i> 3 Monate Support</li>
+                    </ul>
+                    <a href="#contact" class="pricing-card__cta pricing-card__cta--primary">
+                        PAKET WÄHLEN
+                    </a>
+                </div>
 
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required minlength="2" placeholder="Ihr Name">
-                            </div>
+                <div class="pricing-card">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__title">ENTERPRISE</h3>
+                        <div class="pricing-card__price">
+                            <span class="price-amount">CUSTOM</span>
+                            <span class="price-period">INDIVIDUELL</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><i class="fas fa-check"></i> Komplexe Web-Anwendung</li>
+                        <li><i class="fas fa-check"></i> Individuelle Entwicklung</li>
+                        <li><i class="fas fa-check"></i> API-Integration</li>
+                        <li><i class="fas fa-check"></i> Skalierbare Architektur</li>
+                        <li><i class="fas fa-check"></i> Dedizierter Support</li>
+                        <li><i class="fas fa-check"></i> SLA garantiert</li>
+                    </ul>
+                    <a href="#contact" class="pricing-card__cta">
+                        ANGEBOT ANFORDERN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required placeholder="ihre.email@beispiel.de">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="service">Service</label>
-                                <select id="service" name="service">
-                                    <option value="webdev">Web Development</option>
-                                    <option value="consulting">Consulting</option>
-                                    <option value="both">Beides</option>
-                                    <option value="other">Sonstiges</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Nachricht *</label>
-                                <textarea id="message" name="message" required minlength="10" maxlength="5000" rows="6" placeholder="Beschreiben Sie Ihr Projekt..."></textarea>
-                            </div>
-
-                            <button type="submit" class="cta-button cta-primary">
-                                Nachricht senden
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="clients__container">
+            <span class="section-label">VERTRAUEN VON</span>
+            <div class="clients__slider">
+                <div class="clients__track">
+                    <div class="client-logo">
+                        <img src="assets/companies/Clubmatch.png" alt="ClubMatch" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/Bravodesk.png" alt="BravoDesk" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/TapLock.png" alt="TapLock" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/KNAPP.jpg" alt="KNAPP" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/SpaceX.webp" alt="SpaceX" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/Nasa.png" alt="NASA" height="60">
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="client-logo">
+                        <img src="assets/companies/Clubmatch.png" alt="ClubMatch" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/Bravodesk.png" alt="BravoDesk" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/TapLock.png" alt="TapLock" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/KNAPP.jpg" alt="KNAPP" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/SpaceX.webp" alt="SpaceX" height="60">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/companies/Nasa.png" alt="NASA" height="60">
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio__container">
+            <div class="portfolio__header">
+                <span class="section-label">03 / PORTFOLIO</span>
+                <h2 class="section-title">
+                    UNSERE<br>
+                    <span class="text-accent">ARBEITEN</span>
+                </h2>
+            </div>
+            <div class="portfolio__grid">
+                <article class="portfolio-card portfolio-card--large">
+                    <div class="portfolio-card__image">
+                        <img src="https://portfolio.dornerlabs.com/assets/projects/clubmatch-logo.webp" alt="ClubMatch" width="600" height="400">
+                        <div class="portfolio-card__overlay">
+                            <a href="https://clubmatch.party/" target="_blank" rel="noopener noreferrer" class="portfolio-card__link">
+                                <span>VISIT SITE</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card__content">
+                        <h3 class="portfolio-card__title">CLUBMATCH</h3>
+                        <p class="portfolio-card__desc">
+                            Party-App für Event-Discovery (16-30 Jahre). Entwickelt wie TikTok meets Tinder für Events.
+                        </p>
+                        <div class="portfolio-card__tags">
+                            <span>React Native</span>
+                            <span>PostgreSQL</span>
+                            <span>Supabase</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="portfolio-card__image">
+                        <img src="https://portfolio.dornerlabs.com/assets/Pic.webp" alt="Portfolio Website" width="400" height="300">
+                        <div class="portfolio-card__overlay">
+                            <a href="https://portfolio.dornerlabs.com" target="_blank" class="portfolio-card__link">
+                                <span>VIEW SITE</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card__content">
+                        <h3 class="portfolio-card__title">DEVELOPER PORTFOLIO</h3>
+                        <p class="portfolio-card__desc">
+                            Moderne Portfolio-Website mit Performance-Fokus und interaktiven Animationen.
+                        </p>
+                        <div class="portfolio-card__tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="portfolio-card__image">
+                        <img src="https://demos.dornerlabs.com/screenshots/handwerk-thumb.webp" alt="Business Demos" width="400" height="300">
+                        <div class="portfolio-card__overlay">
+                            <a href="https://demos.dornerlabs.com" target="_blank" class="portfolio-card__link">
+                                <span>VIEW DEMOS</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card__content">
+                        <h3 class="portfolio-card__title">BUSINESS TEMPLATES</h3>
+                        <p class="portfolio-card__desc">
+                            6 professionelle Website-Templates für verschiedene Branchen.
+                        </p>
+                        <div class="portfolio-card__tags">
+                            <span>Responsive</span>
+                            <span>SEO</span>
+                            <span>Modern</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact__container">
+            <div class="contact__content">
+                <span class="section-label">04 / KONTAKT</span>
+                <h2 class="contact__title">
+                    LET'S CREATE<br>
+                    <span class="text-accent">TOGETHER</span>
+                </h2>
+                <p class="contact__text">
+                    Haben Sie ein Projekt im Kopf? Lassen Sie uns darüber sprechen.
+                </p>
+                <div class="contact__info">
+                    <a href="mailto:matthias.dorner@dornerlabs.com" class="contact__link">
+                        <i class="fas fa-envelope"></i>
+                        <span>matthias.dorner@dornerlabs.com</span>
+                    </a>
+                    <div class="contact__social">
+                        <a href="https://github.com/MatzeTV-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/matthias-dorner-70714629b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__form">
+                <form id="contactForm" action="https://formspree.io/f/xqedagov" method="POST">
+                    <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label for="name">NAME *</label>
+                        <input type="text" id="name" name="name" required minlength="2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">EMAIL *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">SERVICE</label>
+                        <select id="service" name="service">
+                            <option value="webdev">Web Development</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="automation">Automation</option>
+                            <option value="other">Sonstiges</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">NACHRICHT *</label>
+                        <textarea id="message" name="message" required minlength="10" rows="6"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary">
+                        <span>NACHRICHT SENDEN</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo">&lt;DL&gt;</div>
-                    <p>Dornerlabs – Ihr Partner für Web Development & Consulting</p>
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="footer__logo">DORNERLABS</span>
+                    <p class="footer__tagline">Building digital excellence</p>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Preise</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Rechtliches</h4>
-                    <ul class="footer-links">
-                        <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="datenschutz.html">Datenschutz</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Sprache</h4>
-                    <div class="footer-language">
-                        <a href="index.html" class="active">Deutsch</a>
-                        <span>|</span>
-                        <a href="index-en.html">English</a>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4>LINKS</h4>
+                        <ul>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#pricing">Preise</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>RECHTLICHES</h4>
+                        <ul>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="datenschutz.html">Datenschutz</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>SPRACHE</h4>
+                        <div class="footer__lang">
+                            <a href="index.html" class="active">Deutsch</a>
+                            <span>/</span>
+                            <a href="index-en.html">English</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Dornerlabs. Alle Rechte vorbehalten.</p>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Dornerlabs. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/script.js" defer></script>
 </body>
 </html>
