@@ -1,0 +1,32 @@
+# SRE Security
+
+> SRE Security ist ein österreichischer Sicherheitsdienstleister mit Sitz in Graz. Das Unternehmen bietet professionelle Sicherheitslösungen für Unternehmen, Veranstaltungen und Privatpersonen – 24/7 verfügbar, mit zertifiziertem Personal und über 5 Jahren Erfahrung.
+
+## Unternehmen
+
+SRE Security GmbH bietet maßgeschneiderte Sicherheitslösungen in Österreich. Das Team umfasst 40+ zertifizierte Mitarbeiter und hat über 500 Events erfolgreich betreut.
+
+- Gegründet: Graz, Österreich
+- Team: 40+ zertifizierte Sicherheitsmitarbeiter
+- Erfahrung: 5+ Jahre
+- Erreichbarkeit: 24/7
+
+## Leistungen
+
+- **Objektschutz** – Schutz von Gebäuden, Firmengeländen und Liegenschaften
+- **Event Security** – Sicherheitskonzepte und Personal für Veranstaltungen jeder Größe
+- **VIP-Services** – Doorman, Empfangsdienst und gehobener Personenschutz
+- **Sicherheitsberatung** – Risikoanalyse und individuelle Sicherheitskonzepte
+- **Verkehrsregelung** – Professionelle Verkehrsführung bei Baustellen und Events
+
+## Kontakt
+
+- Adresse: Lortzinggasse 16, 8041 Graz, Österreich
+- Telefon: +43 1 234 567 890
+- E-Mail: office@sre-services.at
+
+## Seiten
+
+- [Startseite](https://dornerlabs.com/demos/sre/): Übersicht aller Leistungen, Referenzen, Karriere und Kontakt
+- [Impressum](https://dornerlabs.com/demos/sre/impressum.html): Rechtliche Angaben gemäß österreichischem Recht
+- [Datenschutzerklärung](https://dornerlabs.com/demos/sre/datenschutz.html): Informationen zur Datenverarbeitung gemäß DSGVO

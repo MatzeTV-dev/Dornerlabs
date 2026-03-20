@@ -1,0 +1,23 @@
+# robots.txt – SRE Security Demo
+# https://dornerlabs.com/demos/sre/
+
+User-agent: *
+Allow: /
+Disallow: /demos/sre/login.html
+
+# KI-Crawler: llms.txt verfügbar
+# AI Crawlers: see llms.txt for structured content
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://dornerlabs.com/demos/sre/sitemap.xml

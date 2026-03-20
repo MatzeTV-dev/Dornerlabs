@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum - SRE Security</title>
     <meta name="description" content="Impressum und rechtliche Informationen von SRE Security GmbH">
-
+    <link rel="icon" href="assets/favicon.ico">
     <!-- Password Protection Check -->
     <script>
         const isAuthenticated = sessionStorage.getItem('sre_authenticated') === 'true';
@@ -332,17 +332,5 @@
             </div>
         </div>
     </div>
-
-    <!-- Logout Button -->
-    <button id="logout-btn" style="position: fixed; top: 20px; right: 20px; background: rgba(238, 129, 47, 0.9); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; z-index: 10001; font-weight: 600;">
-        <i class="fas fa-sign-out-alt"></i> Logout
-    </button>
-
-    <script>
-        document.getElementById('logout-btn').addEventListener('click', function() {
-            sessionStorage.removeItem('sre_authenticated');
-            window.location.href = 'login.html';
-        });
-    </script>
 </body>
 </html>
