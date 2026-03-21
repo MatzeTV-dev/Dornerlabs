@@ -74,8 +74,8 @@ for (let i = 0; i < particleCount; i++) {
 }
 
 // Typing effect for hero text
-const typingText = document.getElementById('typingText');
-const text = 'SICHERHEIT NEU GEDACHT';
+const typingText = document.getElementById('subheadline');
+const text = 'Premium Sicherheitsdienstleister in Österreich';
 let index = 0;
 
 function typeText() {
