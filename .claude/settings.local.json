@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "Bash(start:*)"
+      "Bash(start:*)",
+      "Bash(mkdir -p /Users/matthiasdorner/Development/Dornerlabs/Demos/sre/services)",
+      "Bash(mkdir -p /Users/matthiasdorner/Development/Dornerlabs/Demos/sre/jobs/positions)"
     ]
   }
 }

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karriere – SRE Security</title>
+    <meta name="description" content="Offene Stellen bei SRE Security. Werde Teil unseres Teams für Sicherheitsdienstleistungen in Österreich.">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script>
+        const isAuthenticated = sessionStorage.getItem('sre_authenticated') === 'true';
+        if (!isAuthenticated) { window.location.href = '../login.html'; }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Career Page Styles */
+        .career-hero {
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--deep-black) 0%, var(--charcoal) 60%, rgba(238, 129, 47, 0.12) 100%);
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .career-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 60% 50%, rgba(238, 129, 47, 0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .career-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .career-hero-icon {
+            font-size: 3.5rem;
+            color: var(--brand-orange);
+            margin-bottom: 1.5rem;
+        }
+
+        .career-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .career-hero-sub {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+        }
+
+        /* Why Join Us */
+        .why-join {
+            background: var(--charcoal);
+            padding: 4rem 2rem;
+        }
+
+        .why-join-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--brand-orange);
+            margin-bottom: 2rem;
+            padding-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--brand-orange);
+            border-radius: 2px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: rgba(10, 10, 10, 0.5);
+            border: 1px solid rgba(238, 129, 47, 0.15);
+            border-radius: 12px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .benefit-item:hover {
+            border-color: var(--brand-orange);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--brand-orange);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            font-size: 1rem;
+            color: var(--white);
+            margin-bottom: 0.4rem;
+        }
+
+        .benefit-item p {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.5;
+        }
+
+        /* Open Positions */
+        .open-positions {
+            background: var(--deep-black);
+            padding: 4rem 2rem;
+        }
+
+        .open-positions-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .position-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            background: rgba(26, 26, 26, 0.7);
+            border: 1px solid rgba(238, 129, 47, 0.15);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .position-card:hover {
+            border-color: var(--brand-orange);
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(238, 129, 47, 0.15);
+        }
+
+        .position-left {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex: 1;
+        }
+
+        .position-icon {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            background: rgba(238, 129, 47, 0.12);
+            border: 1px solid rgba(238, 129, 47, 0.3);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--brand-orange);
+        }
+
+        .position-info h3 {
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 0.35rem;
+        }
+
+        .position-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .position-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .position-meta i {
+            color: var(--brand-orange);
+            font-size: 0.8rem;
+        }
+
+        .position-arrow {
+            flex-shrink: 0;
+            color: var(--brand-orange);
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .position-card:hover .position-arrow {
+            transform: translateX(4px);
+        }
+
+        .no-openings {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+        }
+
+        /* Spontaneous Application */
+        .spontaneous {
+            background: var(--charcoal);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .spontaneous-inner {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .spontaneous h2 {
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .spontaneous p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 640px) {
+            .position-card { flex-direction: column; align-items: flex-start; }
+            .position-arrow { align-self: flex-end; }
+            .benefits-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 400px) {
+            .benefits-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <a href="../index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;color:inherit;">
+                <img src="../assets/logo.svg" alt="SRE Security Logo" class="logo-icon" width="40" height="40">
+                <span>SRE <span style="color: var(--brand-orange);">SECURITY</span></span>
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../index.html#about">Über Uns</a></li>
+            <li><a href="../index.html#portfolio">Portfolio</a></li>
+            <li><a href="career.html" class="active">Karriere</a></li>
+            <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="career-hero">
+        <div class="career-hero-content">
+            <div class="career-hero-icon"><i class="fas fa-briefcase"></i></div>
+            <h1>KARRIERE BEI SRE</h1>
+            <p class="career-hero-sub">Werde Teil eines starken Teams – Sicherheit ist unsere Leidenschaft und deine Chance auf eine bedeutungsvolle Karriere.</p>
+        </div>
+    </section>
+
+    <!-- Why Join -->
+    <section class="why-join">
+        <div class="why-join-inner">
+            <h2 class="section-title">Was wir bieten</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Flexible Arbeitszeiten</h3>
+                    <p>Vollzeit, Teilzeit oder geringfügig – wir passen uns deinen Bedürfnissen an.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                    <h3>Familiäres Umfeld</h3>
+                    <p>Ein herzliches Team, das füreinander da ist – auch außerhalb der Arbeit.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Weiterbildung</h3>
+                    <p>Laufende Schulungen und Entwicklungsmöglichkeiten für deine Karriere.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-star"></i></div>
+                    <h3>Besondere Erlebnisse</h3>
+                    <p>Hinter die Kulissen von Konzerten, Sportevents und Großveranstaltungen.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Entwicklungsperspektive</h3>
+                    <p>Klare Karrierewege und persönliche Förderung für engagierte Mitarbeiter.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Sinnvolle Arbeit</h3>
+                    <p>Du schützt Menschen – eine Aufgabe mit echtem gesellschaftlichem Wert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="open-positions">
+        <div class="open-positions-inner">
+            <h2 class="section-title">Offene Stellen</h2>
+
+            <a href="positions/security.html" class="position-card">
+                <div class="position-left">
+                    <div class="position-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="position-info">
+                        <h3>Sicherheitsmitarbeiter (m/w/d)</h3>
+                        <div class="position-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Graz</span>
+                            <span><i class="fas fa-briefcase"></i> Vollzeit / Teilzeit / Geringfügig</span>
+                            <span><i class="fas fa-circle" style="color:#22c55e;font-size:0.5rem;"></i> Offen</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Spontaneous Application -->
+    <section class="spontaneous">
+        <div class="spontaneous-inner">
+            <h2>Keine passende Stelle dabei?</h2>
+            <p>Wir freuen uns jederzeit über Initiativbewerbungen. Schick uns einfach deine Unterlagen – wir melden uns, sobald eine passende Position frei wird.</p>
+            <a href="mailto:office@sre-services.at?subject=Initiativbewerbung" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> Initiativbewerbung senden
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;">
+                    <img src="../assets/logo.svg" alt="SRE Security Logo" class="logo-icon" width="35" height="35">
+                    <h3 style="margin:0;">SRE <span style="color:var(--brand-orange);">SECURITY</span></h3>
+                </div>
+                <p>Ihr verlässlicher Partner für professionelle Sicherheitsdienstleistungen in Österreich.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#about">Über Uns</a></li>
+                    <li><a href="career.html">Karriere</a></li>
+                    <li><a href="../index.html#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontakt</h3>
+                <p>Lortzinggasse 16<br>8041 Graz, Österreich</p>
+                <p><a href="mailto:office@sre-services.at" style="color:#ee812f;">office@sre-services.at</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 SRE Security. Alle Rechte vorbehalten.
+            <a href="../impressum.html">Impressum</a>
+            <a href="../datenschutz.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

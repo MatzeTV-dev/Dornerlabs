@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicherheitsmitarbeiter (m/w/d) – SRE Security Karriere</title>
+    <meta name="description" content="Jetzt bewerben als Sicherheitsmitarbeiter bei SRE Security in Graz. Vollzeit, Teilzeit oder geringfügig möglich.">
+    <link rel="icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* Job Detail Page Styles */
+        .job-detail-hero {
+            min-height: 42vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--deep-black) 0%, var(--charcoal) 60%, rgba(238, 129, 47, 0.12) 100%);
+            padding: 6rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-detail-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 65% 50%, rgba(238, 129, 47, 0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .job-detail-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--brand-orange);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            transition: gap 0.2s;
+        }
+
+        .back-link:hover { gap: 0.75rem; }
+
+        .job-hero-icon {
+            font-size: 3.5rem;
+            color: var(--brand-orange);
+            margin-bottom: 1.25rem;
+        }
+
+        .job-detail-hero h1 {
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .job-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .job-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(238, 129, 47, 0.1);
+            border: 1px solid rgba(238, 129, 47, 0.35);
+            border-radius: 50px;
+            padding: 0.4rem 1rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .job-badge i { color: var(--brand-orange); font-size: 0.8rem; }
+
+        /* Job Content */
+        .job-content {
+            background: var(--deep-black);
+            padding: 4rem 2rem;
+        }
+
+        .job-content-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .job-section {
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(238, 129, 47, 0.12);
+            border-radius: 14px;
+            padding: 2.5rem;
+        }
+
+        .job-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.3rem;
+            color: var(--brand-orange);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(238, 129, 47, 0.15);
+        }
+
+        .job-section h2 i {
+            font-size: 1.1rem;
+        }
+
+        .job-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .job-section ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.97rem;
+            line-height: 1.5;
+        }
+
+        .job-section ul li::before {
+            content: '';
+            flex-shrink: 0;
+            margin-top: 0.5rem;
+            width: 6px;
+            height: 6px;
+            background: var(--brand-orange);
+            border-radius: 50%;
+        }
+
+        /* Apply CTA */
+        .apply-cta {
+            background: rgba(238, 129, 47, 0.06);
+            border: 1px solid rgba(238, 129, 47, 0.25);
+            border-radius: 14px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .apply-cta h2 {
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+
+        .apply-cta p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.75rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .apply-cta .btn {
+            margin: 0 0.5rem 0.75rem;
+        }
+
+        @media (max-width: 640px) {
+            .job-section { padding: 1.75rem; }
+            .apply-cta { padding: 2rem 1.5rem; }
+            .job-badges { gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <a href="../../index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;color:inherit;">
+                <img src="../../assets/logo.svg" alt="SRE Security Logo" class="logo-icon" width="40" height="40">
+                <span>SRE <span style="color: var(--brand-orange);">SECURITY</span></span>
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../../index.html#home">Home</a></li>
+            <li><a href="../../index.html#services">Services</a></li>
+            <li><a href="../../index.html#about">Über Uns</a></li>
+            <li><a href="../../index.html#portfolio">Portfolio</a></li>
+            <li><a href="../career.html">Karriere</a></li>
+            <li><a href="../../index.html#contact">Kontakt</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="job-detail-hero">
+        <div class="job-detail-hero-content">
+            <a href="../career.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Alle Stellen
+            </a>
+            <div class="job-hero-icon"><i class="fas fa-shield-halved"></i></div>
+            <h1>Sicherheitsmitarbeiter (m/w/d)</h1>
+            <div class="job-badges">
+                <span class="job-badge"><i class="fas fa-map-marker-alt"></i> Graz, Österreich</span>
+                <span class="job-badge"><i class="fas fa-briefcase"></i> Vollzeit / Teilzeit / Geringfügig</span>
+                <span class="job-badge"><i class="fas fa-circle" style="color:#22c55e;"></i> Stelle offen</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Content -->
+    <section class="job-content">
+        <div class="job-content-inner">
+
+            <div class="job-section">
+                <h2><i class="fas fa-briefcase"></i> Deine Aufgaben</h2>
+                <ul>
+                    <li>Zutritts- und Eingangskontrollen bei Events und in Objekten</li>
+                    <li>Personen- und Taschenkontrolle</li>
+                    <li>Betreuung und Hilfestellung für Besucher und Gäste</li>
+                    <li>VIP-Service bei exklusiven Veranstaltungen</li>
+                    <li>Kassadienste und Ticketprüfung</li>
+                    <li>Parkplatzbetreuung und Verkehrsregelung vor Ort</li>
+                </ul>
+            </div>
+
+            <div class="job-section">
+                <h2><i class="fas fa-star"></i> Was wir bieten</h2>
+                <ul>
+                    <li>Flexible Arbeitszeiten – angepasst an dein Leben</li>
+                    <li>Arbeiten in einem familiären Umfeld mit freundlichen Kollegen</li>
+                    <li>Interessante und abwechslungsreiche Tätigkeiten</li>
+                    <li>Die Möglichkeit hinter die Kulissen von Großevents zu blicken (Fußballspiele, Red Bull Ring, Konzerte, Messen, u.v.m.)</li>
+                    <li>Ständige Betreuung, Weiterbildung und Schulung</li>
+                    <li>Persönliche und fachliche Entwicklungsperspektiven</li>
+                </ul>
+            </div>
+
+            <div class="job-section">
+                <h2><i class="fas fa-user-check"></i> Was du mitbringst</h2>
+                <ul>
+                    <li>Einwandfreies Führungszeugnis</li>
+                    <li>Einwandfreier Leumund</li>
+                    <li>Sehr gute Deutschkenntnisse (Kundenkontakt)</li>
+                    <li>Erfahrung in Einlasskontrolle oder Ordnungsdienst von Vorteil</li>
+                    <li>Bereitschaft zu Abend-, Wochenend- und Feiertagsdiensten</li>
+                    <li>Teamfähigkeit, Zuverlässigkeit und freundliches Auftreten</li>
+                    <li>Brandschutzausbildung von Vorteil</li>
+                    <li>Führerschein B von Vorteil</li>
+                </ul>
+            </div>
+
+            <!-- Apply CTA -->
+            <div class="apply-cta">
+                <h2>Bereit, Teil unseres Teams zu werden?</h2>
+                <p>
+                    Schick uns deine Bewerbung per E-Mail – Lebenslauf und kurzes Motivationsschreiben genügen.<br>
+                    Wir freuen uns auf dich!
+                </p>
+                <a href="mailto:office@sre-services.at?subject=Bewerbung: Sicherheitsmitarbeiter (m/w/d)" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Jetzt bewerben
+                </a>
+                <a href="../career.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Zurück zur Übersicht
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;">
+                    <img src="../../assets/logo.svg" alt="SRE Security Logo" class="logo-icon" width="35" height="35">
+                    <h3 style="margin:0;">SRE <span style="color:var(--brand-orange);">SECURITY</span></h3>
+                </div>
+                <p>Ihr verlässlicher Partner für professionelle Sicherheitsdienstleistungen in Österreich.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../../index.html#services">Services</a></li>
+                    <li><a href="../../index.html#about">Über Uns</a></li>
+                    <li><a href="../career.html">Karriere</a></li>
+                    <li><a href="../../index.html#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontakt</h3>
+                <p>Lortzinggasse 16<br>8041 Graz, Österreich</p>
+                <p><a href="mailto:office@sre-services.at" style="color:#ee812f;">office@sre-services.at</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 SRE Security. Alle Rechte vorbehalten.
+            <a href="../../impressum.html">Impressum</a>
+            <a href="../../datenschutz.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
