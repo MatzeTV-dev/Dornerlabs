@@ -60,6 +60,7 @@
         .why-join {
             background: var(--charcoal);
             padding: 4rem 2rem;
+            overflow-x: hidden;
         }
 
         .why-join-inner {
@@ -88,7 +89,7 @@
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             margin-top: 1rem;
         }
@@ -132,6 +133,7 @@
         .open-positions {
             background: var(--deep-black);
             padding: 4rem 2rem;
+            overflow-x: hidden;
         }
 
         .open-positions-inner {
@@ -165,6 +167,7 @@
             align-items: center;
             gap: 1.25rem;
             flex: 1;
+            min-width: 0;
         }
 
         .position-icon {
@@ -181,10 +184,15 @@
             color: var(--brand-orange);
         }
 
+        .position-info {
+            min-width: 0;
+        }
+
         .position-info h3 {
             font-size: 1.1rem;
             color: var(--white);
             margin-bottom: 0.35rem;
+            overflow-wrap: break-word;
         }
 
         .position-meta {
@@ -229,6 +237,7 @@
             background: var(--charcoal);
             padding: 4rem 2rem;
             text-align: center;
+            overflow-x: hidden;
         }
 
         .spontaneous-inner {
@@ -249,13 +258,13 @@
             line-height: 1.7;
         }
 
+        @media (max-width: 900px) {
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         @media (max-width: 640px) {
             .position-card { flex-direction: column; align-items: flex-start; }
             .position-arrow { align-self: flex-end; }
-            .benefits-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 400px) {
             .benefits-grid { grid-template-columns: 1fr; }
         }
     </style>
