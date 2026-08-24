@@ -1,15 +1,14 @@
-# SRE Security
+# SRE Security & Services
 
-> SRE Security ist ein österreichischer Sicherheitsdienstleister mit Sitz in Graz. Das Unternehmen bietet professionelle Sicherheitslösungen für Unternehmen, Veranstaltungen und Privatpersonen – 24/7 verfügbar, mit zertifiziertem Personal und über 5 Jahren Erfahrung.
+> SRE Security & Services ist ein österreichischer Sicherheitsdienstleister mit Sitz in Graz. Das Unternehmen bietet professionelle Sicherheitslösungen für Unternehmen, Veranstaltungen und Privatpersonen – 24/7 verfügbar, mit zertifiziertem Personal und über 5 Jahren Erfahrung.
 
 ## Unternehmen
 
-SRE Security GmbH bietet maßgeschneiderte Sicherheitslösungen in Österreich. Das Team umfasst 40+ zertifizierte Mitarbeiter und hat über 500 Events erfolgreich betreut.
+SRE Security & Services bietet maßgeschneiderte Sicherheitslösungen in Österreich. Das Team umfasst 40+ zertifizierte Mitarbeiter und hat über 500 Events erfolgreich betreut.
 
 - Gegründet: Graz, Österreich
-- Team: 40+ zertifizierte Sicherheitsmitarbeiter
-- Erfahrung: 5+ Jahre
-- Erreichbarkeit: 24/7
+- Team: 40+ qualifizierte Sicherheitsmitarbeiter
+- Erfahrung: 7+ Jahre
 
 ## Leistungen
 
@@ -18,11 +17,14 @@ SRE Security GmbH bietet maßgeschneiderte Sicherheitslösungen in Österreich. 
 - **VIP-Services** – Doorman, Empfangsdienst und gehobener Personenschutz
 - **Sicherheitsberatung** – Risikoanalyse und individuelle Sicherheitskonzepte
 - **Verkehrsregelung** – Professionelle Verkehrsführung bei Baustellen und Events
+- **Brandschutz & Arbeitnehmerschutz** - BSB, SFK
+- **Waffenträger** - Bewachung von Objekt/Veranstaltungen sowie Geld und Werttransporte
+- **Night Audit** - Nachtportier & Nachtrezeption
 
 ## Kontakt
 
 - Adresse: Lortzinggasse 16, 8041 Graz, Österreich
-- Telefon: +43 1 234 567 890
+- Telefon: +43 664 2192325
 - E-Mail: office@sre-services.at
 
 ## Seiten
@@ -30,3 +32,12 @@ SRE Security GmbH bietet maßgeschneiderte Sicherheitslösungen in Österreich. 
 - [Startseite](https://dornerlabs.com/demos/sre/): Übersicht aller Leistungen, Referenzen, Karriere und Kontakt
 - [Impressum](https://dornerlabs.com/demos/sre/impressum.html): Rechtliche Angaben gemäß österreichischem Recht
 - [Datenschutzerklärung](https://dornerlabs.com/demos/sre/datenschutz.html): Informationen zur Datenverarbeitung gemäß DSGVO
+- [Karriere](https://dornerlabs.com/demos/sre/jobs/career.html) Übersicht über alle offene stellen
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/event-security.html) Mehr infos über den Service Event Security
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/brandschutz.html) Mehr infos über den Service Brandschutz & Arbeitnehmerschutz
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/waffentraeger.html) Mehr infos über den Service Waffenträger
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/night-audit.html) Mehr infos über den Service Night Audit
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/objektschutz.html) Mehr infos über den Service Objektschutz
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/vip-services.html) Mehr infos über den Service VIP Services
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/verkehrsdienste.html) Mehr infos über den Service verkehrsdienste
+- [Service - Event Security](https://dornerlabs.com/demos/sre/services/sicherheitsberatung.html) Mehr infos über den Service Sicherheitsberatung
