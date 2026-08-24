@@ -161,27 +161,6 @@ a {
     background: var(--white);
 }
 
-.nav__lang {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    color: var(--light-gray);
-}
-
-.nav__lang-link {
-    transition: color 0.3s ease;
-}
-
-.nav__lang-link.active {
-    color: var(--electric);
-}
-
-.nav__lang-link:hover {
-    color: var(--electric);
-}
-
 .nav__toggle {
     display: none;
     flex-direction: column;
